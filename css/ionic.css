@@ -56,11 +56,30 @@ body {
 .reveal blockquote {
   padding: 25px;
   color: white;
+  display: block;
+  position: relative;
+  width: 70%;
+  margin: 5px auto;
+  padding: 25px;
+  font-family: "Georgia", Cambria, "Times New Roman", Times, serif;
+  font-weight: normal;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+  border-left: 4px solid #FFF;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+}
+
+.light-text {
+  color: #dce9ff;
 }
 
 /*********************************************
  * LINKS
  *********************************************/
+
 .reveal a:not(.image) {
   color: #fff;
   text-decoration: none;
@@ -82,6 +101,7 @@ body {
 /*********************************************
  * IMAGES
  *********************************************/
+
 .reveal section img {
   margin: 15px 0px;
   border: 4px solid #333333;
