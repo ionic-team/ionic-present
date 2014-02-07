@@ -10,15 +10,15 @@ body {
   background: #4D84E0;}
 
 .reveal {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 36px;
-  font-weight: normal;
   color: #333333;
+  font-weight: normal;
+  font-size: 36px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 ::selection {
-  color: white;
   background: rgba(0, 0, 0, 0.99);
+  color: white;
   text-shadow: none; 
 }
 
@@ -33,9 +33,9 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: white;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300;
   text-shadow: 0px 1px 3px rgba(0,0,0,0.3);
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 .reveal h2 {
@@ -44,7 +44,7 @@ body {
 
 .reveal h4 {
   font-size: 42px;
-  line-height: 52px
+  line-height: 52px;
 }
 
 .reveal p,
@@ -71,21 +71,21 @@ body {
   transition: color .15s ease; }
 
 .reveal a:not(.image):hover {
+  border: none;
   color: #c0a86e;
-  text-shadow: none;
-  border: none; }
+  text-shadow: none; }
 
 .reveal .roll span:after {
-  color: #fff;
-  background: #564826; }
+  background: #564826;
+  color: #fff; }
 
 /*********************************************
  * IMAGES
  *********************************************/
 .reveal section img {
   margin: 15px 0px;
-  background: rgba(255, 255, 255, 0.12);
   border: 4px solid #333333;
+  background: rgba(255, 255, 255, 0.12);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   -webkit-transition: all .2s linear;
   -moz-transition: all .2s linear;
@@ -94,8 +94,8 @@ body {
   transition: all .2s linear; }
 
 .reveal a:hover img {
-  background: rgba(255, 255, 255, 0.2);
   border-color: #fff;
+  background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
@@ -151,14 +151,26 @@ body {
 
 
 .reveal section img.logo {
-  border: none;
-  box-shadow: none;
-  background: none;
   margin-bottom: 50px;
+  border: none;
+  background: none;
+  box-shadow: none;
 }
 
 .reveal h5.framework-url {
+  margin-top: 40px;
   color: #ddeaff;
   font-weight: 300;
-  margin-top: 40px;
 }
+
+.col {
+  float: left;
+}
+.col.preview {
+  width: 30%;
+}
+.col.code {
+  width: 70%;
+  text-align: left;
+}
+
