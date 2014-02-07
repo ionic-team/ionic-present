@@ -7,29 +7,23 @@
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #f7f2d3;
-  background: -moz-radial-gradient(center, circle cover, white 0%, #f7f2d3 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, white), color-stop(100%, #f7f2d3));
-  background: -webkit-radial-gradient(center, circle cover, white 0%, #f7f2d3 100%);
-  background: -o-radial-gradient(center, circle cover, white 0%, #f7f2d3 100%);
-  background: -ms-radial-gradient(center, circle cover, white 0%, #f7f2d3 100%);
-  background: radial-gradient(center, circle cover, white 0%, #f7f2d3 100%);
-  background-color: #f7f3de; }
+  background: #4D84E0;}
 
 .reveal {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 36px;
   font-weight: normal;
-  letter-spacing: -0.02em;
-  color: #333333; }
+  color: #333333;
+}
 
 ::selection {
   color: white;
-  background: rgba(79, 64, 28, 0.99);
-  text-shadow: none; }
+  background: rgba(0, 0, 0, 0.99);
+  text-shadow: none; 
+}
 
 /*********************************************
- * HEADERS
+ * Type
  *********************************************/
 .reveal h1,
 .reveal h2,
@@ -38,20 +32,27 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #333333;
+  color: white;
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  line-height: 0.9em;
-  letter-spacing: 0.02em;
-  text-shadow: none; }
+  font-weight: 300;
+  text-shadow: 0px 1px 3px rgba(0,0,0,0.3);
+}
 
-.reveal h1 {
-  text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaaaaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.15); }
+.reveal h4 {
+  font-size: 42px;
+  line-height: 52px
+}
+
+.reveal p {
+  color: white;
+  text-shadow: 0px 1px 3px rgba(0,0,0,0.3);
+}
 
 /*********************************************
  * LINKS
  *********************************************/
 .reveal a:not(.image) {
-  color: #8b743d;
+  color: #fff;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
@@ -84,7 +85,7 @@ body {
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
-  border-color: #8b743d;
+  border-color: #fff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
@@ -92,31 +93,31 @@ body {
  *********************************************/
 .reveal .controls div.navigate-left,
 .reveal .controls div.navigate-left.enabled {
-  border-right-color: #8b743d; }
+  border-right-color: #fff; }
 
 .reveal .controls div.navigate-right,
 .reveal .controls div.navigate-right.enabled {
-  border-left-color: #8b743d; }
+  border-left-color: #fff; }
 
 .reveal .controls div.navigate-up,
 .reveal .controls div.navigate-up.enabled {
-  border-bottom-color: #8b743d; }
+  border-bottom-color: #fff; }
 
 .reveal .controls div.navigate-down,
 .reveal .controls div.navigate-down.enabled {
-  border-top-color: #8b743d; }
+  border-top-color: #fff; }
 
 .reveal .controls div.navigate-left.enabled:hover {
-  border-right-color: #c0a86e; }
+  border-right-color: #ddd; }
 
 .reveal .controls div.navigate-right.enabled:hover {
-  border-left-color: #c0a86e; }
+  border-left-color: #ddd; }
 
 .reveal .controls div.navigate-up.enabled:hover {
-  border-bottom-color: #c0a86e; }
+  border-bottom-color: #ddd; }
 
 .reveal .controls div.navigate-down.enabled:hover {
-  border-top-color: #c0a86e; }
+  border-top-color: #ddd; }
 
 /*********************************************
  * PROGRESS BAR
@@ -125,7 +126,7 @@ body {
   background: rgba(0, 0, 0, 0.2); }
 
 .reveal .progress span {
-  background: #8b743d;
+  background: #fff;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
@@ -136,4 +137,18 @@ body {
  * SLIDE NUMBER
  *********************************************/
 .reveal .slide-number {
-  color: #8b743d; }
+  color: #fff; }
+
+
+.reveal section img.logo {
+  border: none;
+  box-shadow: none;
+  background: none;
+  margin-bottom: 50px;
+}
+
+.reveal h5.framework-url {
+  color: #ddeaff;
+  font-weight: 300;
+  margin-top: 40px;
+}
