@@ -44,13 +44,20 @@
 				</section>
 
 
+        <section>
+          <blockquote>
+            &ldquo;So you want to build a native app?&rdquo;
+          </blockquote>
+        </section>
+
+
 				<section>
 					<h3>More Platforms. More Problems.</h3>
           <p style="margin-top: 60px">
-            <img src="img/ionic-logo.png" class="logo" width="210" height="210" style="margin-right: 15px">
-            <img src="img/ionic-logo.png" class="logo" width="210" height="210" style="margin-left: 15px; margin-right: 15px">
-            <img src="img/ionic-logo.png" class="logo" width="210" height="210" style="margin-left: 15px; margin-right: 15px">
-            <img src="img/ionic-logo.png" class="logo" width="210" height="210" style="margin-left: 15px;">
+            <img src="img/apple.png" class="logo" width="210" height="210" style="margin-right: 15px">
+            <img src="img/android.png" class="logo" width="210" height="210" style="margin-left: 15px; margin-right: 15px">
+            <img src="img/windows.png" class="logo" width="210" height="210" style="margin-left: 15px; margin-right: 15px">
+            <img src="img/firefoxos.png" class="logo" width="210" height="210" style="margin-left: 15px;">
           </p>
           <p class="light-text">
             Why are we still coding for multiple platforms?
@@ -59,11 +66,11 @@
 
 
         <section>
-          <h2>It's not 2007 anymore</h2>
+          <h2>Native Apps</h2>
           <ul>
-            <li>We now have incredibly fast devices</li>
-            <li>Massively improved APIs</li>
-            <li>Browsers actually implementing standards</li>
+            <li>Proficiency in each platform required</li>
+            <li>Timely process</li>
+            <li>Costly development</li>
           </ul>
         </section>
 
@@ -75,7 +82,7 @@
             <li>Web wrapped in native layer</li>
             <li>Direct access to native APIs</li>
             <li>Cordova/Phonegap</li>
-            <li>It's still just web development</li>
+            <li>The guts is just web dev</li>
           </ul>
         </section>
 
@@ -110,11 +117,6 @@
           <p style="margin-top: 30px">
             (You'll feel right at home)
           </p>
-        </section>
-
-
-        <section>
-          <h2>Core Components</h2>
         </section>
 
 
@@ -299,13 +301,33 @@
 
 
         <section>
-          <h2>Navigation &amp; History</h2>
-          <ul>
-            <li>Keeps track of views</li>
-            <li>Shows back button when possible</li>
-            <li>Each tab has its own history stack</li>
-            <li>Works with Android's back button</li>
-          </ul>
+          <div class="col preview">
+            <img src="img/pullrefresh-example.png" class="logo" width="380" height="800">
+          </div>
+          <div class="col code">
+            <h2>Navigation</h2>
+            <ul style="margin-left: 70px">
+              <li>Shows back button when possible</li>
+              <li>Each tab has its own history stack</li>
+              <li>Works with Android's back button</li>
+            </ul>
+          <pre><code data-trim contenteditable>
+<tabs tabs-type="tabs-icon-only">
+
+  <tab title="Home" icon-on="icon ion-ios7-filing" icon-off="icon ion-ios7-filing-outline">
+    <!-- Tab 1 content -->
+  </tab>
+
+  <tab title="About" icon-on="icon ion-ios7-clock" icon-off="icon ion-ios7-clock-outline">
+    <!-- Tab 2 content -->
+  </tab>
+
+  <tab title="Settings" icon-on="icon ion-ios7-gear" icon-off="icon ion-ios7-gear-outline">
+    <!-- Tab 3 content -->
+  </tab>
+
+</tabs></code></pre>
+          </div>
         </section>
 
 
