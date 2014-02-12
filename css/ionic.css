@@ -53,6 +53,10 @@ body {
   text-shadow: 0px 1px 3px rgba(0,0,0,0.3);
 }
 
+.reveal li {
+  padding-bottom: 12px;
+}
+
 .reveal pre {
   width: 100%;
 }
@@ -91,16 +95,20 @@ body {
   -moz-transition: color .15s ease;
   -ms-transition: color .15s ease;
   -o-transition: color .15s ease;
-  transition: color .15s ease; }
+  transition: color .15s ease; 
+}
 
 .reveal a:not(.image):hover {
   border: none;
-  color: #c0a86e;
-  text-shadow: none; }
+  text-shadow: none; 
+  color: white;
+  text-decoration: underline;
+}
 
 .reveal .roll span:after {
   background: #564826;
-  color: #fff; }
+  color: #fff; 
+}
 
 /*********************************************
  * IMAGES
