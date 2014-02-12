@@ -89,19 +89,26 @@
 
 
         <section>
-          <h3>jQuery Mobile Pros</h3>
-          <ul>
-            <li>Works on legacy mobile phones (Blackberry 4)</li>
-            <li>Progressive enhancement</li>
-          </ul>
+          <h3 style="margin-bottom: 60px;">jQuery Mobile</h3>
 
-          <h3>jQuery Mobile Cons</h3>
-          <ul>
-            <li>Heavy DOM manipulation</li>
-            <li>Designed for mobile websites, not apps</li>
-            <li>Clashes with MVC Frameworks</li>
-            <li>Doesn't play well with Phonegap/Cordova</li>
-          </ul>
+          <div class="col">
+            <h4>Pros</h4>
+            <ul>
+              <li>Works on legacy devices (Blackberry 4)</li>
+              <li>Progressive enhancement</li>
+              <li>MIT Licensed</li>
+            </ul>
+          </div>
+
+          <div class="col">
+            <h4>Cons</h4>
+            <ul>
+              <li>Heavy DOM manipulation</li>
+              <li>Mobile websites, not apps</li>
+              <li>Clashes with MVC Frameworks</li>
+              <li>Doesn't play well with Phonegap/Cordova</li>
+            </ul>
+          </div>
         </section>
 
 
@@ -118,7 +125,7 @@
             <li>Technology lock-in</li>
             <li>Complex Licensing</li>
             <li>Not web-based</li>
-            <li>High Costs</li>
+            <li>High/Hidden Costs</li>
           </ul>
         </section>
 
@@ -133,12 +140,11 @@
         <section>
           <h2>Apples to Oranges</h2>
           <ul>
-            <li>Desktop legecy</li>
-            <li>Too heavy</li>
-            <li>300ms delay</li>
-            <li>Responsive !== mobile app</li>
+            <li>Responsive <code>!==</code> mobile app</li>
             <li>Not a mobile UI kit</li>
-            <li>Zero application logic</li>
+            <li>Desktop legecy</li>
+            <li>Minimal application logic</li>
+            <li>300ms delay</li>
           </ul>
         </section>
 
@@ -164,12 +170,15 @@
 
 
         <section>
-          <h2>Web Technologie You Already Know and Love</h2>
-          <ul>
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>JavaScript</li>
-          </ul>
+          <h2>Web Technologies You Already Know and Love</h2>
+          <div style="margin-top: 70px">
+            <img src="img/ionic-logo.png" class="logo" width="200" height="200">
+            <img src="img/ionic-logo.png" class="logo" width="200" height="200" style="margin-left: 70px; margin-right: 70px;">
+            <img src="img/ionic-logo.png" class="logo" width="200" height="200">
+          </div>
+          <p style="margin-top: 30px">
+            (You'll feel right at home)
+          </p>
         </section>
 
 
@@ -430,27 +439,6 @@
         <section>
           <h2>MIT License</h2>
         </section>
-
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-				</section>
 
 
 				<section>

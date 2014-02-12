@@ -53,6 +53,10 @@ body {
   text-shadow: 0px 1px 3px rgba(0,0,0,0.3);
 }
 
+.reveal pre {
+  width: 100%;
+}
+
 .reveal blockquote {
   padding: 25px;
   color: white;
@@ -186,6 +190,7 @@ body {
 
 .col {
   float: left;
+  width: 50%;
 }
 .col.preview {
   width: 35%;;
@@ -194,4 +199,8 @@ body {
   width: 65%;
   text-align: left;
 }
+.col.code > * {
+  margin-left: 40px;
+}
+
 
