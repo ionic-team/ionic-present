@@ -72,12 +72,17 @@ body {
   font-family: "Georgia", Cambria, "Times New Roman", Times, serif;
   font-weight: normal;
   font-style: italic;
+  /*
   background: rgba(255, 255, 255, 0.1);
   box-shadow: none;
   border-left: 4px solid #FFF;
   border-radius: 2px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
+  */
+  background: none;
+  border: none;
+  box-shadow: none;
 }
 
 .light-text {
