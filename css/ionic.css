@@ -33,7 +33,7 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: white;
-  text-shadow: 0px 1px 3px rgba(0,0,0,0.3);
+  /*text-shadow: 0px 1px 3px rgba(0,0,0,0.3); */
   font-weight: 300;
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
@@ -50,7 +50,7 @@ body {
 .reveal p,
 .reveal li {
   color: white;
-  text-shadow: 0px 1px 3px rgba(0,0,0,0.3);
+  /*text-shadow: 0px 1px 3px rgba(0,0,0,0.3); */
 }
 
 .reveal li {
