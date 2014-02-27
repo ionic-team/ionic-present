@@ -61,6 +61,7 @@ body {
 
 .reveal pre code {
   max-height: 460px;
+  word-wrap: break-word;
 }
 
 .reveal blockquote {
