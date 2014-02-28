@@ -10,3 +10,4 @@ Additionally, please feel free to use this presentation as a starting point and 
  - [Blog](http://ionicframework.com/blog/)
  - [Newsletter](http://ionicframework.com/subscribe/)
  - [@Ionicframework](https://twitter.com/ionicframework)
+ - [Present Ionic Homepage](http://ionicframework.com/present-ionic/)
