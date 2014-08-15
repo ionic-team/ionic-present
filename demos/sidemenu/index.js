@@ -29,7 +29,7 @@ angular.module('ionicApp', ['ionic'])
       url: "/attendees",
       views: {
         'menuContent' :{
-          templateUrl: "attendees.html",
+          templateUrl: "templates/attendees.html",
           controller: "AttendeesCtrl"
         }
       }

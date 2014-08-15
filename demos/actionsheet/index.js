@@ -5,7 +5,7 @@ angular.module('ionicApp', ['ionic'])
   $scope.showActionsheet = function() {
 
     $ionicActionSheet.show({
-      titleText: 'ActionSheet Example',
+      titleText: 'Action Sheet Example',
       buttons: [
         { text: 'Share' },
         { text: 'Move' },

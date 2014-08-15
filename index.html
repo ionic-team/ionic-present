@@ -58,28 +58,11 @@
           <h2>Overview</h2>
           <ol>
             <li>Native vs Hybrid Apps</li>
-            <li>Ionic Intro</li>
+            <li>Intro Ionic</li>
             <li>UI Components</li>
             <li>Ionic CLI</li>
             <li>Demos</li>
           </ol>
-        </section>
-
-
-        <section>
-          <blockquote>
-            &ldquo;We need an mobile presence! We need an app!&rdquo;
-          </blockquote>
-        </section>
-
-
-        <section>
-          <h2>First, identify what will work</h2>
-          <ul>
-            <li>Responsive Website</li>
-            <li>Mobile Website</li>
-            <li>Native App</li>
-          </ul>
         </section>
 
 
@@ -130,7 +113,7 @@
             <li>Web wrapped in native layer</li>
             <li>Direct access to native APIs</li>
             <li>Familiar web dev environment</li>
-            <li>Develop a single (web platform) code base</li>
+            <li>Develop a single code base (web platform)</li>
           </ul>
         </section>
 
@@ -153,6 +136,7 @@
             <li>Have a large team of experienced native developers?</li>
             <li>Does your billion-dollar revenue depend on this app?</li>
             <li>If so...do native</li>
+            <li class="fragment">...but today it's not so black and white</liv>
           </ul>
         </section>
 
@@ -266,6 +250,12 @@
 
 
         <section>
+          <img src="img/trends.png">
+          <p style="font-size:10px">http://www.google.com/trends/explore#q=angularjs%2C%20ember.js%2C%20knockoutjs%2C%20backbonejs&date=8%2F2011%2037m&cmpt=q</p>
+        </section>
+
+
+        <section>
           <img src="img/angular-icon.png" class="logo" width="210" height="210" style="margin-bottom: 0px">
           <h3>Standing on the Shoulders of AngularJS</h3>
           <ul>
@@ -273,12 +263,6 @@
             <li>Extends the HTML vocabulary</li>
             <li>UI Components using Directives and Services</li>
           </ul>
-        </section>
-
-
-        <section>
-          <img src="img/trends.png">
-          <p style="font-size:10px">http://www.google.com/trends/explore#q=angularjs%2C%20ember.js%2C%20knockoutjs%2C%20backbonejs&date=8%2F2011%2037m&cmpt=q</p>
         </section>
 
 
@@ -354,7 +338,7 @@
           <h2>Ionic's Adoption</h2>
           <ul>
             <li>8400+ Github Stars</li>
-            <li>Top 80 mosted starred of all Github repos</li>
+            <li>Top 80 mosted starred Github repos</li>
             <li>Consistently Top 10 trending JS Github repos</li>
             <li>Ionic CLI averages 1,000 downloads/day</li>
             <li>120,000+ Ionic apps have been started from our CLI</li>
@@ -431,10 +415,10 @@
             <h2>Collection Repeat</h2>
             <ul style="margin-left: 70px">
               <li>Similar to Angular's <code>ng-repeat</code></li>
+              <li>Inspired by iOS’s UICollectionView</li>
               <li>Scroll through thousands of items</li>
               <li>Only renders the viewable items</li>
               <li>Smooth jank-free scrolling</li>
-              <li>Low memory footprint</li>
             </ul>
             <pre><code data-trim contenteditable class="xml">
 <div class="list">
@@ -565,10 +549,11 @@
             <h2>Action Sheet</h2>
             <ul style="margin-left: 70px">
               <li>AngularJS Service</li>
+              <li>Inject into controllers</li>
             </ul>
           <pre><code data-trim contenteditable class="js">
 $ionicActionSheet.show({
-  titleText: 'Modify your album',
+  titleText: 'Action Sheet Examplt',
   buttons: [
     { text: 'Share' },
     { text: 'Move' },
@@ -600,6 +585,15 @@ $ionicPopover.fromTemplateUrl('popover.html',
     $scope.popover = popover;
   }
 );</code></pre>
+          <pre><code data-trim contenteditable class="xml">
+<ion-popover-view>
+  <ion-header-bar>
+    <h1 class="title">My Popover Title</h1>
+  </ion-header-bar>
+  <ion-content class="padding">
+    Hello!
+  </ion-content>
+</ion-popover-view></code></pre>
           </div>
         </section>
 
@@ -726,9 +720,8 @@ $ionicModal.fromTemplateUrl('modal.html', {
 
 
         <section>
-          <h2><code>&lt;/html&gt;</code></h2>
-          <h3><a href="http://ionicframework.com/" target="_blank">ionicframework.com</a></h3>
-          <h3><a href="https://twitter.com/ionicframework" target="_blank">@ionicframework</a></h3>
+          <h2><code style="font-size:60px">&lt;/html&gt;</code></h2>
+          <h3><a href="https://twitter.com/adamdbradley" target="_blank">@adamdbradley</a></h3>
         </section>
 
 
