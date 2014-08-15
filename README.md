@@ -1,7 +1,7 @@
 Present Ionic Framework
 =============
 
-[Start the presentation](http://ionicframework.com/present-ionic/slides/)
+[Start the presentation](http://adamdbradley.github.io/ionic-present/#/)
 
 Additionally, please feel free to use this presentation as a starting point and make it your own.
 
