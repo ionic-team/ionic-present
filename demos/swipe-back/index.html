@@ -7,17 +7,13 @@
   <script src="index.js"></script>
 </head>
 
-<body ng-controller="MainCtrl">
+<body>
 
-  <ion-header-bar>
-    <h1 class="title">Action Sheet</h1>
-  </ion-header-bar>
+  <ion-nav-bar>
+    <ion-nav-back-button class="button-clear button-dark"></ion-nav-back-button>
+  </ion-nav-bar>
 
-  <ion-content class="padding">
-
-    <button ng-click="showActionsheet()" class="button">Show Action Sheet</button>
-
-  </ion-content>
+  <ion-nav-view></ion-nav-view>
 
 </body>
 </html>

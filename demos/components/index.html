@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app="ionicApp">
+<head>
+  <link href="../../ionic/css/ionic.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <script src="../../ionic/js/ionic.bundle.js"></script>
+  <script src="index.js"></script>
+</head>
+
+<body ng-controller="MainCtrl">
+
+  <ion-header-bar>
+    <button ng-click="showActionsheet()" class="button ion-settings button-icon"></button>
+    <h1 class="title">Components</h1>
+    <button class="button button-icon ion-compose" ng-click="modal.show()"></button>
+  </ion-header-bar>
+
+  <ion-content>
+
+    <ion-refresher on-refresh="doRefresh()"></ion-refresher>
+
+    <ion-list>
+
+      <ion-item ng-repeat="item in items">
+        {{ ::item }}
+      </ion-item>
+
+      <ion-toggle>
+        Toggle
+      </ion-toggle>
+
+      <ion-checkbox>
+        Checkbox
+      </ion-checkbox>
+
+    </ion-list>
+
+  </ion-content>
+
+  <script id="templates/modal.html" type="text/ng-template">
+    <ion-modal-view>
+      <ion-header-bar class="bar bar-header bar-positive">
+        <h1 class="title">New Contact</h1>
+        <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+      </ion-header-bar>
+      <ion-content class="padding">
+        <div class="list">
+          <label class="item item-input">
+            <span class="input-label">First Name</span>
+            <input ng-model="newUser.firstName" type="text">
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Last Name</span>
+            <input ng-model="newUser.lastName" type="text">
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Email</span>
+            <input ng-model="newUser.email" type="text">
+          </label>
+          <button class="button button-full button-positive" ng-click="createContact(newUser)">Create</button>
+        </div>
+      </ion-content>
+    </ion-modal-view>
+  </script>
+
+</body>
+</html>

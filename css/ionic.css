@@ -257,8 +257,29 @@ body {
 
 .reveal .demo-frame iframe {
   position: absolute;
-  left: 13px;
-  top: 104px;
-  width: 287px;
-  height: 509px
+  left: 7px;
+  top: 78px;
+  width: 297px;
+  height: 527px
+}
+
+.reveal section h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 58px
+}
+
+.reveal section h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 46px
+}
+
+
+.reveal section h4 {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 4px;
 }
