@@ -15,11 +15,6 @@ angular.module('ionicApp', ['ionic'])
   .state('page2', {
     url: '/page2',
     templateUrl: 'templates/page2.html'
-  })
-
-  .state('page3', {
-    url: '/page3',
-    templateUrl: 'templates/page3.html'
   });
 
   $urlRouterProvider.otherwise("/");

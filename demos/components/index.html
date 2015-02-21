@@ -10,7 +10,7 @@
 <body ng-controller="MainCtrl">
 
   <ion-header-bar>
-    <button ng-click="showActionsheet()" class="button ion-settings button-icon"></button>
+    <button class="button ion-settings button-icon" ng-click="showActionsheet()"></button>
     <h1 class="title">Components</h1>
     <button class="button button-icon ion-compose" ng-click="modal.show()"></button>
   </ion-header-bar>
@@ -33,7 +33,19 @@
         Checkbox
       </ion-checkbox>
 
+      <div class="item range range-positive">
+        <i class="icon ion-ios-sunny-outline"></i>
+        <input type="range" name="volume" min="0" max="100" value="33">
+        <i class="icon ion-ios-sunny"></i>
+      </div>
+
     </ion-list>
+
+    <div class="padding">
+      <p>
+        <button class="button button-block button-balanced" ng-click="showConfirm()">Popups</button>
+      </p>
+    </div>
 
   </ion-content>
 

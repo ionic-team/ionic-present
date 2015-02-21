@@ -1,6 +1,6 @@
 angular.module('ionicApp', ['ionic'])
 
-.controller('MainCtrl', function($scope, $timeout, $ionicActionSheet, $ionicModal) {
+.controller('MainCtrl', function($scope, $timeout, $ionicActionSheet, $ionicModal, $ionicPopup) {
 
   $scope.items = ['Item 1', 'Item 2'];
 
@@ -46,5 +46,19 @@ angular.module('ionicApp', ['ionic'])
     }, 1000);
 
   };
+
+  $scope.showConfirm = function() {
+   var confirmPopup = $ionicPopup.confirm({
+     title: 'Consume Ice Cream',
+     template: 'Are you sure you want to eat this ice cream?'
+   });
+   confirmPopup.then(function(res) {
+     if(res) {
+       console.log('You are sure');
+     } else {
+       console.log('You are not sure');
+     }
+   });
+ };
 
 });

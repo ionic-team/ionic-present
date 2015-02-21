@@ -1,5 +1,8 @@
-.sass-cache
-.*.sw*
 .DS_Store
-.idea
-null
+.svn
+log/*.log
+tmp/**
+node_modules/
+.sass-cache
+css/reveal.min.css
+js/reveal.min.js
