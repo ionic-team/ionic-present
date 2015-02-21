@@ -1395,12 +1395,12 @@ body {
 .reveal .left {
   text-align: left; }
 .reveal .me {
-  margin: 30px 0 0 150px;
+  margin: 30px 0 0 130px;
   font-size: 1.2em;
   line-height: 2em;
   list-style-type: none; }
   .reveal .me li {
-    padding: 17px 0 30px 120px; }
+    padding: 0 0 0 70px; }
 .reveal strong {
   font-weight: 900; }
 .reveal .native-logos img {
@@ -1413,3 +1413,6 @@ body {
   .reveal .stack li {
     margin: 8px;
     padding: 5px 6px 7px 12px; }
+.reveal .ionic-blue {
+  text-shadow: none;
+  color: #3374de; }
