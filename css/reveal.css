@@ -1416,3 +1416,26 @@ body {
 .reveal .ionic-blue {
   text-shadow: none;
   color: #3374de; }
+.reveal .col {
+  float: left;
+  width: 50%; }
+.reveal .col.preview {
+  width: 35%; }
+.reveal .col.code {
+  width: 65%;
+  text-align: left; }
+.reveal .col.code > * {
+  margin-left: 40px; }
+.reveal .demo-frame {
+  background: url('../img/demo-bg.png') no-repeat;
+  background-size: 340px;
+  height: 700px;
+  margin-top: 0;
+  margin-left: -15px;
+  min-width: 345px; }
+.reveal .demo-frame iframe {
+  position: absolute;
+  left: 7px;
+  top: 98px;
+  width: 296px;
+  height: 527px; }

@@ -135,6 +135,38 @@ section.has-light-background {
     color: #3374de;
   }
 
+  .col {
+    float: left;
+    width: 50%;
+  }
+  .col.preview {
+    width: 35%;;
+  }
+  .col.code {
+    width: 65%;
+    text-align: left;
+  }
+  .col.code > * {
+    margin-left: 40px;
+  }
+
+  .demo-frame {
+    background: url('../img/demo-bg.png') no-repeat;
+    background-size: 340px;
+    height: 700px;
+    margin-top: 0;
+    margin-left: -15px;
+    min-width: 345px;
+  }
+
+  .demo-frame iframe {
+    position: absolute;
+    left: 7px;
+    top: 98px;
+    width: 296px;
+    height: 527px
+  }
+
 }
 
 
