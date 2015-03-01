@@ -77,7 +77,7 @@
 
         <section data-background="img/oldphones.jpg">
           <blockquote style="font-size: 80px; font-family:Georgia; text-shadow: 5px 0 15px rgba(0,0,0,.7)">
-            &ldquo;But...hybrid apps are slow!
+            &ldquo;These aren't your grandpa's hybrid apps
           </blockquote>
         </section>
 
@@ -143,7 +143,7 @@
           <h3 style="margin:0">Native SDKs...</h3>
           <h2 style="font-size:2.2em;">Are Great!</h2>
           <p style="margin:30px auto 20px auto; width: 600px">
-            Common UI, APIs, views, transitions, gestures, interactions, navigation, stack history, etc.
+            Common UI, APIs, views, navigation, stack history, transitions, interactions, gestures, etc.
           </p>
           <p class="native-logos">
             <img src="img/apple.png">
@@ -171,6 +171,13 @@
 
 
         <section>
+          <blockquote>
+            Focus on building your app, not on how an app should work.
+          </blockquote>
+        </section>
+
+
+        <section>
           <h3 style="margin:0; font-size:32px">Web Technologies You Already</h3>
           <h2 style="font-size: 85px;">Know &amp; Love</h2>
           <div style="margin-top: 30px">
@@ -186,7 +193,7 @@
 
         <section data-background="img/angular-bg.png">
           <h3 style="font-size:42px; margin:0">Standing on the Shoulders</h3>
-          <h2 style="font-size:90px;">of AngularJS</h2>
+          <h2 style="font-size:90px;">of Angular</h2>
           <p style="margin-top:60px;"><strong>Extends the HTML</strong> vocabulary</p>
           <p>Proven for <strong>large-scale</strong> app development</p>
           <p>UI Components using <strong>Directives &amp; Services</strong></p>
@@ -212,19 +219,12 @@
         </section>
 
 
-        <section>
-          <blockquote>
-            Focus on building your app, not on how an app should work.
-          </blockquote>
-        </section>
-
-
         <section data-background="img/hybrid-layers-phone.jpg">
           <h2 style="color:black;">How does it all come together?</h2>
           <ul class="stack">
             <li style="background: #20ab93">Your App</li>
             <li style="background: #4c8df5">Ionic</li>
-            <li style="background: #d94442">AngularJS</li>
+            <li style="background: #d94442">Angular</li>
             <li style="background: #3b4854">WebView (Cordova)</li>
             <li style="background: #d4deee; color: #3b4854;">Native App</li>
           </ul>
@@ -263,10 +263,10 @@
             <h2>Navigation</h2>
             <ul style="margin-left: 70px">
               <li>Uses AngularUI Router</li>
-              <li>Multi-history stack</li>
               <li>Shows back button when possible</li>
               <li>Transitions follow direction of nav</li>
               <li>Works with Android's back button</li>
+              <li>Updates the app's URL</li>
             </ul>
           <pre><code data-trim contenteditable class="xml">
 <ion-nav-bar>
@@ -275,6 +275,37 @@
 
 <ion-nav-view></ion-nav-view>
 </code></pre>
+          </div>
+        </section>
+
+
+        <section>
+          <div class="col preview demo-frame">
+            <iframe src="demos/tabs/index.html"></iframe>
+          </div>
+          <div class="col code">
+            <h2>Tabs</h2>
+            <ul style="margin-left: 70px">
+              <li>Multi-history stack</li>
+              <li>Each tab has its own nav history</li>
+              <li>Abstract states in AngularUI Router</li>
+            </ul>
+            <pre><code data-trim contenteditable class="xml">
+<ion-tabs>
+
+  <ion-tab title="Home" icon="ion-ios-home">
+    <ion-nav-view name="home"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="About" icon="ion-ios-information">
+    <ion-nav-view name="about"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="Contact" icon="ion-ios-world">
+    <ion-nav-view name="contact"></ion-nav-view>
+  </ion-tab>
+
+</ion-tabs></code></pre>
           </div>
         </section>
 
@@ -306,39 +337,10 @@
             <ul style="margin-left: 70px">
               <li>Swipe back to previous view</li>
               <li>Interactive transition</li>
+              <li>Benefit of cached views</li>
+              <li>Still updates the app's URL</li>
               <li>WebView (Cordova) only</li>
             </ul>
-          </div>
-        </section>
-
-
-        <section>
-          <div class="col preview demo-frame">
-            <iframe src="demos/tabs/index.html"></iframe>
-          </div>
-          <div class="col code">
-            <h2>Tabs</h2>
-            <ul style="margin-left: 70px">
-              <li>Nested views</li>
-              <li>Each tab has its own nav history</li>
-              <li>Abstract states in AngularUI Router</li>
-            </ul>
-            <pre><code data-trim contenteditable class="xml">
-<ion-tabs>
-
-  <ion-tab title="Home" icon="ion-ios-home">
-    <ion-nav-view name="home"></ion-nav-view>
-  </ion-tab>
-
-  <ion-tab title="About" icon="ion-ios-information">
-    <ion-nav-view name="about"></ion-nav-view>
-  </ion-tab>
-
-  <ion-tab title="Contact" icon="ion-ios-world">
-    <ion-nav-view name="contact"></ion-nav-view>
-  </ion-tab>
-
-</ion-tabs></code></pre>
           </div>
         </section>
 
@@ -427,15 +429,6 @@
 
 
         <section>
-          <h2>Ionic Showcase</h2>
-          <img src="img/showcase.png" height="450" style="border: 0">
-          <p>
-            <a href="http://showcase.ionicframework.com/" target="_blank">showcase.ionicframework.com</a>
-          </p>
-        </section>
-
-
-        <section>
           <h2><strong>MIT LICENSED</strong></h2>
           <h6 class="light-text">Free to use (even commercially)</h6>
         </section>
@@ -448,7 +441,8 @@
         </section>
 
         <section>
-          <img src="img/cli.png" height="280" style="border: 0">
+          <p><code>npm install -g ionic cordova</code></p>
+          <img src="img/cli.png" height="240" style="border: 0">
           <ul>
             <li>Quickly create a project with starter templates</li>
             <li>Boilerplate app structure ready for customization</li>
@@ -476,6 +470,22 @@
         </section>
 
 
+        <section>
+          <h2>Ionic Showcase</h2>
+          <img src="img/showcase.png" height="450" style="border: 0">
+          <p>
+            <a href="http://showcase.ionicframework.com/" target="_blank">showcase.ionicframework.com</a>
+          </p>
+        </section>
+
+
+        <section>
+          <h4 style="margin:0 0 10px 0">ngCordova</h4>
+          <img src="img/ng-cordova.png" class="logo" width=500>
+          <p style="margin:0"><a href="http://ngcordova.com/">ngcordova.com</a></p>
+        </section>
+
+
         <section data-background="img/ionicio.jpg">
         </section>
 
@@ -487,13 +497,6 @@
         <section data-background="white">
           <h2 class="ionic-blue">Ionic View App</h2>
           <img src="img/ionic-view-preview-right.png" class="logo"/>
-        </section>
-
-
-        <section>
-          <h4 style="margin:0 0 10px 0">ngCordova</h4>
-          <img src="img/ng-cordova.png" class="logo" width=500>
-          <p style="margin:0"><a href="http://ngcordova.com/">ngcordova.com</a></p>
         </section>
 
 
