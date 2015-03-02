@@ -48,7 +48,7 @@ section.has-light-background {
     text-transform: uppercase;
   }
 
-  p, th, td {
+  p, th, td, ol, ul, li {
     text-shadow: $headingTextShadow;
   }
 

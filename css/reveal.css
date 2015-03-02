@@ -1366,7 +1366,7 @@ body {
 
 .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
   text-transform: uppercase; }
-.reveal p, .reveal th, .reveal td {
+.reveal p, .reveal th, .reveal td, .reveal ol, .reveal ul, .reveal li {
   text-shadow: 0px 2px 7px rgba(0, 0, 0, 0.4); }
 .reveal section img {
   background: transparent;
