@@ -7,6 +7,11 @@
   <title>Collection-Repeat</title>
 
   <link href="../../ionic/css/ionic.css" rel="stylesheet">
+  <style>
+    .item {
+      border-bottom: 0;
+    }
+  </style>
   <script src="../../ionic/js/ionic.bundle.js"></script>
 </head>
 
@@ -16,12 +21,6 @@
 
     <ion-header-bar class="bar-positive">
       <h1 class="title">My 3000 Cats</h1>
-    </ion-header-bar>
-
-    <ion-header-bar class="bar-subheader item-input-inset">
-      <label class="item-input-wrapper">
-        <input type="text" ng-model="filter" placeholder="Filter Contacts..." type="search">
-      </label>
     </ion-header-bar>
 
     <ion-content direction="y">
