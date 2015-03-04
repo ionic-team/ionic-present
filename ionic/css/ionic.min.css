@@ -2597,9 +2597,6 @@ body.grade-b, body.grade-c {
   overflow: hidden;
   margin-top: -1px; }
 
-body:not(.platform-webview) .scroll-content::-webkit-scrollbar {
-  display: none; }
-
 /**
  * Scroll is the scroll view component available for complex and custom
  * scroll view functionality.
@@ -3463,6 +3460,9 @@ a.subdued {
 
 .bar .back-button.hide, .bar .buttons .hide {
   display: none; }
+
+.nav-bar-tabs-top .bar {
+  background-image: none; }
 
 /**
  * Tabs
@@ -4384,9 +4384,13 @@ ion-tabs.tabs-color-active-dark .tab-item {
   display: none; }
 
 .platform-ios .popover {
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.08); }
-.platform-ios .popover, .platform-ios .popover .bar-header {
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.08);
   border-radius: 10px; }
+.platform-ios .popover .bar-header {
+  -webkit-border-top-right-radius: 10px;
+  border-top-right-radius: 10px;
+  -webkit-border-top-left-radius: 10px;
+  border-top-left-radius: 10px; }
 .platform-ios .popover .scroll-content {
   margin: 8px 0;
   border-radius: 10px; }
@@ -4507,6 +4511,8 @@ ion-tabs.tabs-color-active-dark .tab-item {
     -moz-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column; }
+  .popup-container input, .popup-container textarea {
+    width: 100%; }
 
 .popup-head {
   padding: 15px 10px;
@@ -5633,11 +5639,11 @@ input, button, select, textarea {
     -webkit-border-radius: 0;
     border-radius: 0;
     -webkit-box-flex: 1;
-    -webkit-flex: 1 0 220px;
+    -webkit-flex: 1 220px;
     -moz-box-flex: 1;
-    -moz-flex: 1 0 220px;
-    -ms-flex: 1 0 220px;
-    flex: 1 0 220px;
+    -moz-flex: 1 220px;
+    -ms-flex: 1 220px;
+    flex: 1 220px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -5721,12 +5727,6 @@ input, button, select, textarea {
   margin-left: 10.66667px; }
 
 .input-label {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 100px;
-  -moz-box-flex: 1;
-  -moz-flex: 1 0 100px;
-  -ms-flex: 1 0 100px;
-  flex: 1 0 100px;
   display: table;
   padding: 7px 10px 7px 0px;
   max-width: 200px;
@@ -6929,6 +6929,11 @@ a.button {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
 
+.row-no-padding {
+  padding: 0; }
+  .row-no-padding > .col {
+    padding: 0; }
+
 .row + .row {
   margin-top: -5px;
   padding-top: 0; }
@@ -7401,7 +7406,19 @@ a.button {
 [collection-repeat] {
   /* Position is set by transforms */
   left: 0 !important;
-  position: absolute !important; }
+  top: 0 !important;
+  position: absolute !important;
+  z-index: 1; }
+
+.collection-repeat-container {
+  position: relative; }
+
+.collection-repeat-after-container {
+  z-index: 0;
+  display: block;
+  /* when scrolling horizontally, make sure the after container doesn't take up 100% width */ }
+  .collection-repeat-after-container.horizontal {
+    display: inline-block; }
 
 /**
  * Platform

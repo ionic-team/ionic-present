@@ -212,6 +212,14 @@ window.ionic.version = '1.0.0-beta.14';
       };
     },
 
+    contains: function(parentNode, otherNode) {
+      var current = otherNode;
+      while (current) {
+        if (current === parentNode) return true;
+        current = current.parentNode;
+      }
+    },
+
     /**
      * @ngdoc method
      * @name ionic.DomUtil#getPositionInParent
@@ -3395,6 +3403,7 @@ ionic.DomUtil.ready(function() {
       var parent = scope.$parent;
       scope.$$disconnected = true;
       scope.$broadcast('$ionic.disconnectScope');
+
       // See Scope.$destroy
       if (parent.$$childHead === scope) {
         parent.$$childHead = scope.$$nextSibling;
@@ -5140,7 +5149,7 @@ ionic.views.Scroll = ionic.views.View.inherit({
     this.__fadeScrollbars('out');
   },
 
-  resize: function() {
+  resize: function(continueScrolling) {
     var self = this;
     if (!self.__container || !self.options) return;
 
@@ -5150,7 +5159,8 @@ ionic.views.Scroll = ionic.views.View.inherit({
       self.__container.clientWidth,
       self.__container.clientHeight,
       self.options.getContentWidth(),
-      self.options.getContentHeight()
+      self.options.getContentHeight(),
+      continueScrolling
     );
   },
   /*
@@ -5243,7 +5253,7 @@ ionic.views.Scroll = ionic.views.View.inherit({
    * @param contentWidth {Integer} Outer width of inner element
    * @param contentHeight {Integer} Outer height of inner element
    */
-  setDimensions: function(clientWidth, clientHeight, contentWidth, contentHeight) {
+  setDimensions: function(clientWidth, clientHeight, contentWidth, contentHeight, continueScrolling) {
     var self = this;
 
     if (!clientWidth && !clientHeight && !contentWidth && !contentHeight) {
@@ -5273,7 +5283,9 @@ ionic.views.Scroll = ionic.views.View.inherit({
     self.__resizeScrollbars();
 
     // Refresh scroll position
-    self.scrollTo(self.__scrollLeft, self.__scrollTop, true, null, true);
+    if (!continueScrolling) {
+      self.scrollTo(self.__scrollLeft, self.__scrollTop, true, null, true);
+    }
 
   },
 
@@ -6135,15 +6147,11 @@ ionic.views.Scroll = ionic.views.View.inherit({
     clearTimeout(self.__sizerTimeout);
 
     var sizer = function() {
-      self.resize();
-
-      // if ((self.options.scrollingX && !self.__maxScrollLeft) || (self.options.scrollingY && !self.__maxScrollTop)) {
-      //   //self.__sizerTimeout = setTimeout(sizer, 1000);
-      // }
+      self.resize(true);
     };
 
     sizer();
-    self.__sizerTimeout = setTimeout(sizer, 1000);
+    self.__sizerTimeout = setTimeout(sizer, 500);
   },
 
   /*
@@ -6973,7 +6981,9 @@ ionic.scroll = {
     _handleEndDrag: function(e) {
       var self = this;
 
-      self.isScrollFreeze = self.scrollView.freeze(false);
+      if (self.scrollView) {
+        self.isScrollFreeze = self.scrollView.freeze(false);
+      }
 
       self._didDragUpOrDown = false;
 
