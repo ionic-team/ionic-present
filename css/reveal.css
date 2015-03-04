@@ -1413,7 +1413,7 @@ body {
   .reveal .stack li {
     margin: 8px;
     padding: 5px 6px 7px 12px; }
-.reveal .ionic-blue {
+.reveal .ionic-blue, .reveal .ionic-blue * {
   text-shadow: none;
   color: #3374de; }
 .reveal .col {

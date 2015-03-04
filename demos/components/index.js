@@ -37,12 +37,7 @@ angular.module('ionicApp', ['ionic'])
   $scope.doRefresh = function() {
 
     $timeout( function() {
-      //simulate async response
-      $scope.items.push('Item ' + ($scope.items.length + 1));
-
-      //Stop the ion-refresher from spinning
       $scope.$broadcast('scroll.refreshComplete');
-
     }, 1000);
 
   };

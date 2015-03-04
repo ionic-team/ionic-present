@@ -21,9 +21,10 @@
 
     <ion-list>
 
-      <ion-item ng-repeat="item in items">
+      <a class="item item-icon-right" ng-repeat="item in items" href="#">
+        <i class="icon ion-chevron-right icon-accessory"></i>
         {{ ::item }}
-      </ion-item>
+      </a>
 
       <ion-toggle>
         Toggle
@@ -32,6 +33,17 @@
       <ion-checkbox>
         Checkbox
       </ion-checkbox>
+
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Lightsaber
+        </div>
+        <select>
+          <option>Blue</option>
+          <option selected>Green</option>
+          <option>Red</option>
+        </select>
+      </label>
 
       <div class="item range range-positive">
         <i class="icon ion-ios-sunny-outline"></i>
@@ -43,7 +55,7 @@
 
     <div class="padding">
       <p>
-        <button class="button button-block button-balanced" ng-click="showConfirm()">Popups</button>
+        <button class="button button-block button-positive" ng-click="showConfirm()">Popups</button>
       </p>
     </div>
 

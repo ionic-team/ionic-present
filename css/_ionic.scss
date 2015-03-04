@@ -130,8 +130,9 @@ section.has-light-background {
     }
   }
 
-  .ionic-blue {
-    text-shadow:none;
+  .ionic-blue,
+  .ionic-blue * {
+    text-shadow: none;
     color: #3374de;
   }
 
