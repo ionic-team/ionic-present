@@ -7,17 +7,17 @@
 </head>
 
 <body ng-controller="MyCtrl">
-
+<ion-view>
   <ion-header-bar class="bar-positive">
-    <div class="buttons">
-      <button class="button button-icon icon ion-ios7-minus-outline"
+
+      <button class="button button-icon icon ion-ios-minus-outline"
         ng-click="data.showDelete = !data.showDelete; data.showReorder = false"></button>
     <h1 class="title">Lists</h1>
     <button class="button"
         ng-click="data.showDelete = false; data.showReorder = !data.showReorder">
           Reorder
         </button>
-    </div>
+
   </ion-header-bar>
 
   <ion-content>
@@ -45,6 +45,6 @@
     </ion-list>
 
   </ion-content>
-
+</ion-view>
 </body>
 </html>
