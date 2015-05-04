@@ -16,12 +16,12 @@ $mainColor: #fff;
 $headingColor: #fff;
 
 $mainFontSize: 32px;
-$mainFont: "Helvetica Neue", Helvetica, sans-serif;
-$headingFont: "Helvetica Neue", Helvetica, sans-serif;
-$headingTextShadow: 0px 2px 7px rgba(0, 0, 0, .4);
+$mainFont: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+$headingFont: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+$headingTextShadow: 1px 1px 15px rgba(0, 0, 0, .2);
 $headingLetterSpacing: normal;
 $headingTextTransform: none;
-$headingFontWeight: 600;
+$headingFontWeight: 200;
 $linkColor: white;
 $linkColorHover: white;
 $selectionBackgroundColor: lighten( $linkColor, 25% );
@@ -169,5 +169,3 @@ section.has-light-background {
   }
 
 }
-
-

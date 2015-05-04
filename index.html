@@ -9,6 +9,7 @@
     <meta name="description" content="Ionic Framework Presentation: The beautiful, open source framework for developing hybrid mobile apps with HTML5.">
     <meta name="author" content="https://twitter.com/adamdbradley">
     <meta name="author" content="https://twitter.com/benjsperry">
+    <meta name="author" content="https://twitter.com/perrygovier">
     <link rel="shortcut icon" href="favicon.ico">
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -44,29 +45,57 @@
 
 
 
-        <section data-background="img/superpower.jpg">
-          <h1 style="margin-top: 330px;" class="dark-shadow">Superpowers<br>for Mobile App Development</h1>
+        <section>
+          <img src="img/ionic-logo.png" class="logo" width="296" height="331">
+          <h4>Building Hybrid Apps with AngularJS and Ionic</h4>
         </section>
 
 
-        <section data-background="img/providence.png">
-          <img src="https://pbs.twimg.com/profile_images/578237281384841216/R3ae1n61.png" style="width:200px; height: 200px;
-                                       max-width:none; max-height: none;
-                                       position: absolute; left: 40px; top: -10px;
-                                       border-radius: 50%; border: 4px solid black;
-                                       box-shadow: 5px 0 10px black;">
-          <h1 class="left" style="margin-left:300px;">Mike Hartington</h1>
-          <h3 class="left" style="margin-left:300px;">Ionic Developer Advocate</h3>
-          <ul class="me">
-            <li style="background:url(img/marker.png) no-repeat 0 8px;">Providence, RI</li>
-            <li style="background:url(img/twitter.png) no-repeat 0 16px;">
-              <a href="https://twitter.com/mhartington" target="_blank" style="text-decoration:none">@mhartington</a>
-            </li>
-            <li style="background:url(img/github.png) no-repeat 0 17px;">
-              <a href="https://github.com/mhartington" target="_blank" style="text-decoration:none">
-                mhartington</a>
-              </li>
+        <section>
+          <img src="img/me.png" style="position: absolute; top:0; left:0; max-width: 260px; max-height: 260px; border-radius: 30px">
+          <ul style="position: absolute; top:0; left:300px;">
+            <li>Ionitron</li>
+            <li>Ionic Framework Developer</li>
+            <li>Madison, WI, USA, Earth, Sol, Milky Way</li>
+            <li><a href="https://twitter.com/ionitron">@ionitron</a></li>
+            <li><a href="https://github.com/ionitron">github.com/ionitron</a></li>
           </ul>
+        </section>
+
+
+        <section>
+          <h2>Overview</h2>
+          <ol>
+            <li>Native vs Hybrid Apps</li>
+            <li>Intro Ionic</li>
+            <li>UI Components</li>
+            <li>Ionic CLI</li>
+            <li>Demos</li>
+          </ol>
+        </section>
+
+
+        <section>
+          <blockquote>
+            &ldquo;I want to build an app!&rdquo;
+          </blockquote>
+        </section>
+
+
+        <section>
+          <h3>More Platforms. More Problems.</h3>
+          <ul>
+            <li>Proficiency in each platform required</li>
+            <li>Entirely separate code bases</li>
+            <li>Timely &amp; expensive development</li>
+            <li>Diminishing returns</li>
+          </ul>
+          <p style="margin-top: 60px">
+            <img src="img/apple.png" class="logo" width="200" height="200" style="margin-right: 10px">
+            <img src="img/android.png" class="logo" width="200" height="200" style="margin-left: 10px; margin-right: 10px">
+            <img src="img/windows.png" class="logo" width="200" height="200" style="margin-left: 10px; margin-right: 10px">
+            <img src="img/blackberry.png" class="logo" width="200" height="200" style="margin-left: 10px;">
+          </p>
         </section>
 
 
@@ -99,7 +128,7 @@
             <tr>
               <td>2007</td>
               <td>iPhone</td>
-              <td>620 MHz</td>
+              <td>400 MHz</td>
               <td>128 MB</td>
             </tr>
             <tr>
@@ -150,17 +179,11 @@
           <p style="margin:30px auto 20px auto; width: 600px">
             Common UI, APIs, views, navigation, stack history, transitions, interactions, gestures, etc.
           </p>
-          <p class="native-logos">
-            <img src="img/apple.png">
-            <img src="img/android.png">
-            <img src="img/windows.png">
-            <img src="img/blackberry.png" style="opacity:0.8">
-            <img src="img/firefoxos.png">
-          </p>
+            <img src="img/native-sdk.png" style="width:66%">
         </section>
 
 
-        <section data-background="img/websdk.png">
+        <section data-background="img/websdk.png" style="width:100%">
         </section>
 
 
@@ -222,10 +245,33 @@
           </ul>
         </section>
 
+        <section>
+          <div class="col preview demo-frame">
+            <iframe isrc="demos/list/index.html"></iframe>
+          </div>
+          <div class="col code">
+            <h2>Complex Lists</h2>
+            <ul style="margin-left: 70px">
+              <li>AngularJS Directive</li>
+              <li>Buttons exposed by swiping</li>
+              <li>Reorder</li>
+              <li>Delete</li>
+            </ul>
+            <pre><code data-trim contenteditable class="xml">
+<ion-list>
+
+  <ion-item ng-repeat="item in items" item="item">
+    List Item {{ item.id }}
+  </ion-item>
+
+</ion-list></code></pre>
+          </div>
+        </section>
+
 
         <section>
           <div class="col preview demo-frame">
-            <iframe src="demos/collection-repeat/index.html"></iframe>
+            <iframe isrc="demos/collection-repeat/index.html"></iframe>
           </div>
           <div class="col code">
             <h3>Collection Repeat</h3>
@@ -249,7 +295,7 @@
 
         <section>
           <div class="col preview demo-frame">
-            <iframe src="demos/tabs/index.html"></iframe>
+            <iframe isrc="demos/tabs/index.html"></iframe>
           </div>
           <div class="col code">
             <h3>Navigation</h3>
@@ -279,6 +325,38 @@
           </div>
         </section>
 
+        <section>
+          <div class="col preview demo-frame">
+            <iframe isrc="demos/sidemenu/index.html"></iframe>
+          </div>
+          <div class="col code">
+            <h2>Side Menu</h2>
+          <pre><code data-trim contenteditable class="xml">
+<ion-side-menus>
+
+  <ion-side-menu-content>
+
+    <ion-nav-view name="menuContent"></ion-nav-view>
+
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+
+    <ion-header-bar class="bar-assertive">
+      <h1 class="title">Left Menu</h1>
+    </ion-header-bar>
+
+    <ion-content>
+      ...
+    </ion-content>
+
+  </ion-side-menu>
+
+</ion-side-menus>
+</code></pre>
+          </div>
+        </section>
+
 
         <section>
           <div class="col" style="width:30%">
@@ -300,7 +378,7 @@
 
         <section>
           <div class="col preview demo-frame">
-            <iframe src="demos/swipe-back/index.html"></iframe>
+            <iframe isrc="demos/swipe-back/index.html"></iframe>
           </div>
           <div class="col code">
             <h3>Swipe To Go Back</h3>
@@ -317,7 +395,7 @@
 
         <section>
           <div class="col preview demo-frame">
-            <iframe src="demos/components/index.html"></iframe>
+            <iframe isrc="demos/components/index.html"></iframe>
           </div>
           <div class="col code">
             <h3>Other Components</h3>
@@ -341,16 +419,8 @@
 
 
         <section>
-          <h2>Ionicons</h2>
-          <img src="img/ionicons.png" class="logo" width="655" height="436">
-          <p>700+ MIT licensed font-icons included</p>
-          <p><a href="http://ionicons.com/" target="_blank">ionicons.com</a></p>
-        </section>
-
-
-        <section>
           <div class="col preview demo-frame">
-            <iframe src="demos/spinner/index.html"></iframe>
+            <iframe isrc="demos/spinner/index.html"></iframe>
           </div>
           <div class="col code">
             <h2>Spinners</h2>
@@ -370,6 +440,14 @@
         </section>
 
 
+        <section>
+          <h2>Ionicons</h2>
+          <img src="img/ionicons.png" class="logo" width="655" height="436">
+          <p>700+ MIT licensed font-icons included</p>
+          <p><a href="http://ionicons.com/" target="_blank">ionicons.com</a></p>
+        </section>
+
+
         <section data-background="img/ionitron.png">
           <blockquote class="ionic-blue" style=" margin-bottom: 250px; text-align: right;">
             ...but there's more to Ionic
@@ -382,12 +460,6 @@
           <p class="ionic-blue">Boilerplate <strong>app structure</strong> ready for customization</p>
           <p class="ionic-blue"><strong>LiveReload</strong> both local and native builds</p>
           <p class="ionic-blue">Build and run <strong>native apps</strong></p>
-        </section>
-
-
-        <section data-background="#232323">
-          <h2 style="color:#32b83b;font-family:Monaco;"><strong>Demo Time!</strong></h2>
-          <h6 style="color:#32b83b;font-family:Monaco;">May the demo gods be with us</h6>
         </section>
 
 
@@ -429,26 +501,26 @@
         <section data-background="img/adoption.png">
           <h2 class="ionic-blue">Ionic's Adoption</h2>
           <ul class="ionic-blue">
-            <li>14,000+ Github Stars</li>
-            <li>Top 50 most starred Github repos</li>
+            <li>16,000+ Github Stars</li>
+            <li>Top 40 most starred Github repos</li>
             <li>Consistently Top 10 trending JS Github repos</li>
-            <li>Ionic CLI 70,000 downloads/month</li>
-            <li>400,000+ Ionic apps have been started from our CLI</li>
+            <li>Ionic CLI 95,000 downloads/month</li>
+            <li>600,000+ Ionic apps have been started from our CLI</li>
             <li>Released Alpha: November 2013</li>
             <li>Released Beta: March 2014</li>
+            <li>Released RC: March 2015</li>
           </ul>
         </section>
 
 
-        <section data-background="white">
+        <!-- <section data-background="white">
           <img src="img/v1rc.png">
-        </section>
+        </section> -->
 
 
         <section>
           <h2>What's Next!</h2>
           <ul>
-            <li>Removal of JavaScript scrolling</li>
             <li>Component Modularity</li>
             <li>Customized Animations</li>
             <li>Webworkers and Multi-threading</li>
@@ -462,16 +534,70 @@
         </section>
 
 
-        <section>
-          <h2><code style="font-size: 80px">&lt;/html&gt;</code></h2>
-          <h3 style="text-transform:none; font-size: 46px">
-            <a style="text-decoration:none;" href="https://twitter.com/mhartington" target="_blank">@mhartington</a>
-          </h3>
-          <h4 style="text-transform:none;font-size:36px;margin-top:50px;">
-            <a style="text-decoration:none;" href="http://mikehartington.com/ionic-presents/#/">mhartington.github.com/ionic-presents</a>
-          </h4>
+
+
+
+
+        <section data-background="#232323">
+          <h2 style="color:#32b83b;font-family:Monaco;"><strong>Demo Time!</strong></h2>
+          <h6 style="color:#32b83b;font-family:Monaco;">May the demo gods be with us</h6>
         </section>
 
+        <section>
+          <h2><strong>MIT LICENSED</strong></h2>
+          <h6 class="light-text">Free to use (even commercially)</h6>
+        </section>
+
+
+        <section>
+          <h2>Get Started with Ionic!</h2>
+          <br />
+          <p>
+            <strong>Getting started guide</strong>
+            <br />
+            <a href="hhttp://ionicframework.com/getting-started/" target="_blank">
+              <span class="light-text">ionicframework.com/getting-started</span>
+            </a>
+          </p>
+          <br />
+          <p>
+            <strong>Documentation</strong>
+            <br />
+            <a href="http://ionicframework.com/docs/" target="_blank">
+              <span class="light-text">ionicframework.com/docs</span>
+            </a>
+          </p>
+          <br />
+          <p>
+            <strong>Visit the Community Forum</strong>
+            <br />
+            <a href="http://forum.ionicframework.com/" target="_blank">
+              <span class="light-text">forum.ionicframework.com</span>
+            </a>
+          </p>
+          <br />
+          <p>
+            <strong>Contribute on GitHub</strong>
+            <br />
+            <a href="https://github.com/driftyco/ionic" target="_blank">
+              <span class="light-text">github.com/driftyco/ionic</span>
+            </a>
+          </p>
+        </section>
+
+        <section>
+          <h2><code style="font-size:60px">&lt;/html&gt;</code></h2>
+          <h3>
+            <a href="https://twitter.com/ionicframework" target="_blank">
+              @ionicframework
+            </a>
+          </h3>
+          <h4>
+            <a href="http://ionicframework.github.io/ionic-present/#/">
+              http://ionicframework.github.io/ionic-present
+            </a>
+          </h4>
+        </section>
 
       </div>
 
@@ -502,6 +628,22 @@
           { src: 'plugin/notes/notes.js', async: true }
         ]
       });
+
+      Reveal.addEventListener( 'slidechanged', function( event ) {
+        // load iframes on page enter to speed up initial load time
+        console.log(event)
+        var iframe = event.currentSlide.querySelector('iframe')
+        if(iframe){
+          iframe.setAttribute('src',iframe.getAttribute('isrc'));
+        }
+
+        var prevIframe = event.previousSlide.querySelector('iframe');
+        if(prevIframe){
+          prevIframe.setAttribute('src','');
+        }
+
+    // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+} );
 
     </script>
 
