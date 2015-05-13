@@ -1,4 +1,4 @@
-<ion-view title="Event Check-in">
+<ion-view view-title="Event Check-in">
   <ion-content>
     <form class="list" ng-show="showForm">
       <div class="item item-divider">
@@ -30,7 +30,7 @@
     </form>
 
     <div ng-hide="showForm">
-      <pre ng-bind="attendee | json"></pre>
+      <pre ng-bind="attendee | json"></pre> 
       <a href="#/event/attendees">View attendees</a>
     </div>
   </ion-content>
