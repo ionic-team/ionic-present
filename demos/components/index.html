@@ -5,6 +5,15 @@
   <link href="style.css" rel="stylesheet">
   <script src="../../ionic/js/ionic.bundle.js"></script>
   <script src="index.js"></script>
+  <style>
+    p.spin {
+      text-align: center;
+    }
+    .spinner svg {
+      width: 24%;
+      height: 45px;
+    }
+  </style>
 </head>
 
 <body ng-controller="MainCtrl">
@@ -59,6 +68,19 @@
       </p>
     </div>
 
+    <p class="spin">
+      <ion-spinner icon="android"></ion-spinner>
+      <ion-spinner icon="ios"></ion-spinner>
+      <ion-spinner icon="bubbles" class="spinner-balanced"></ion-spinner>
+      <ion-spinner icon="crescent" class="spinner-royal"></ion-spinner>
+    </p>
+
+    <p class="spin">
+      <ion-spinner icon="dots" class="spinner-dark"></ion-spinner>
+      <ion-spinner icon="lines" class="spinner-calm"></ion-spinner>
+      <ion-spinner icon="ripple" class="spinner-assertive"></ion-spinner>
+      <ion-spinner icon="spiral"></ion-spinner>
+    </p>
   </ion-content>
 
   <script id="templates/modal.html" type="text/ng-template">
