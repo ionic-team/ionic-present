@@ -1,4 +1,5 @@
 .sass-cache
+node_modules
 .*.sw*
 .DS_Store
 .idea
