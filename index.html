@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-
+    
     <title>Ionic + Angular: Superpowers for Mobile App Development</title>
 
     <meta name="description" content="Ionic Framework Presentation: The beautiful, open source framework for developing hybrid mobile apps with HTML5.">
@@ -40,28 +40,18 @@
 
     <div class="reveal">
 
+      <div class="footer">
+        SAP Development Center Turkey | November 25, 2015
+      </div>
+      
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
-
-
 
         <section>
           <img src="img/ionic-logo.png" class="logo" width="296" height="331">
           <h4>Building Hybrid Apps with AngularJS and Ionic</h4>
         </section>
-
-
-        <section>
-          <img src="img/me.png" style="position: absolute; top:0; left:0; max-width: 260px; max-height: 260px; border-radius: 30px">
-          <ul style="position: absolute; top:0; left:300px;">
-            <li>Ionitron</li>
-            <li>Ionic Framework Developer</li>
-            <li>Madison, WI, USA, Earth, Sol, Milky Way</li>
-            <li><a href="https://twitter.com/ionitron">@ionitron</a></li>
-            <li><a href="https://github.com/ionitron">github.com/ionitron</a></li>
-          </ul>
-        </section>
-
+ 
         <section>
           <h2>Overview</h2>
           <ol>
@@ -112,11 +102,6 @@
           <blockquote style="font-size: 80px; font-family:Georgia; text-shadow: 5px 0 15px rgba(0,0,0,.7)">
             &ldquo;It's not 2007 anymore&rdquo;
           </blockquote>
-        </section>
-
-
-        <section data-background="img/dylan.jpg">
-          <img src="img/times-changin.png" style="height: 100px; margin: 0 300px 40px 0;">
           <table>
             <tr>
               <th>Year</th>
@@ -144,8 +129,7 @@
             </tr>
           </table>
         </section>
-
-
+ 
         <section>
           <h4 style="font-size:50px; margin:0;">Web-standards</h4>
           <h4 style="font-size:80px;">Have improved!</h4>
@@ -158,20 +142,7 @@
             <img src="img/caniuse-flexbox.png" width=460 class="logo">
           </p>
         </section>
-
-
-        <section data-background="white">
-          <img src="img/ios8-adoption.png">
-          <p style="font-size:10px">https://mixpanel.com/trends/#report/ios_8/from_date:-141,report_unit:day,to_date:0</p>
-        </section>
-
-
-        <section data-background="white">
-          <img src="img/android-adoption.png">
-          <p style="font-size:10px">https://mixpanel.com/trends/#report/android_os_adoption</p>
-        </section>
-
-
+ 
         <section>
           <h3 style="margin:0">Native SDKs...</h3>
           <h2 style="font-size:2.2em;">Are Great!</h2>
@@ -217,6 +188,8 @@
           </ul>
         </section>
 
+        <section data-background-iframe="https://angularjs.org/">
+        </section>
 
         <section data-background="img/sass.png">
           <h2 style="font-size:3em; text-transform: none;">Sass!</h2>
@@ -226,6 +199,8 @@
           <p><strong>Variables based</strong> with default settings</p>
         </section>
 
+        <section data-background-iframe="http://sass-lang.com/">
+        </section>
 
         <section data-background="img/phones-stacked.png">
           <h2 style="color:black; margin-bottom: 50px">How it all comes together</h2>
@@ -236,8 +211,11 @@
             <li style="background: #3b4854">WebView (Cordova)</li>
             <li style="background: #d4deee; color: #3b4854;">Native App</li>
           </ul>
+        
         </section>
 
+        <section data-background-iframe="https://cordova.apache.org/">
+        </section>
 
         <section data-background="img/continuity.png">
         </section>
@@ -390,34 +368,25 @@
           <p class="ionic-blue">Build and run <strong>native apps</strong></p>
         </section>
 
-        <section data-background="img/chromium.jpg">
-          <h3 style="margin:0; font-size:60px;">Modern</h3>
-          <h2 style=" font-size:80px;">Chromium!</h2>
-          <p>Chromium for Android <strong>WebViews</strong></p>
-          <p><strong>Upgrade Android</strong> 4.1+ and above</p>
-          <p>Same hardware, <strong>modern software</strong></p>
-          <p><strong>Amazing performance</strong> improvements</p>
-        </section>
-
         <section data-background="img/ng-cordova.png">
+         
+          <p style="margin-bottom: 10%; font-size:0.5em; color:gray; opacity: 0.6">
         </section>
 
-
-        <section data-background="img/ionicio.png">
+        <section data-background-iframe="http://ngcordova.com/">
         </section>
-
 
         <section data-background="img/ionic-view.png">
         </section>
 
-
         <section data-background="img/ionic-creator.png">
         </section>
 
-
         <section data-background="img/market.png">
         </section>
-
+        
+        <section data-background-iframe="https://market.ionic.io/">
+        </section>
 
         <section data-background="img/community.jpg">
         </section>
@@ -433,7 +402,7 @@
           <p>
             <strong>Getting started guide</strong>
             <br />
-            <a href="hhttp://ionicframework.com/getting-started/" target="_blank">
+            <a href="http://ionicframework.com/getting-started/" target="_blank">
               <span class="light-text">ionicframework.com/getting-started</span>
             </a>
           </p>
@@ -464,24 +433,23 @@
         </section>
 
 
-        <section data-background="#232323">
-          <h2 style="color:#32b83b;font-family:Monaco;"><strong>Demo Time!</strong></h2>
-          <h6 style="color:#32b83b;font-family:Monaco;">May the demo gods be with us</h6>
+        <section>
+          <h2><strong>Demo Time!</strong></h2>
+          <h4>Install ionic</h4>
+            <pre><code data-trim class="shell">
+$ npm install -g cordova ionic
+            </code></pre>
+          <h4>Start an application</h4>
+            <pre><code data-trim class="shell">
+$ ionic start myApp tabs
+$ cd myApp
+$ ionic serve
+            </code></pre>
         </section>
 
 
         <section>
           <h2><code style="font-size:60px">&lt;/html&gt;</code></h2>
-          <h3>
-            <a href="https://twitter.com/ionicframework" target="_blank">
-              @ionicframework
-            </a>
-          </h3>
-          <h4>
-            <a href="http://ionicframework.github.io/ionic-present/#/">
-              http://ionicframework.github.io/ionic-present
-            </a>
-          </h4>
         </section>
 
       </div>
