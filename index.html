@@ -48,38 +48,36 @@
         <section>
           <img src="img/ionic-logo.png" class="logo" width="296" height="331">
           <h4>Building Hybrid Apps with AngularJS and Ionic</h4>
-        </section>
-
-
-        <section>
-          <img src="img/me.png" style="position: absolute; top:0; left:0; max-width: 260px; max-height: 260px; border-radius: 30px">
-          <ul style="position: absolute; top:0; left:300px;">
-            <li>Ionitron</li>
-            <li>Ionic Framework Developer</li>
-            <li>Madison, WI, USA, Earth, Sol, Milky Way</li>
-            <li><a href="https://twitter.com/ionitron">@ionitron</a></li>
-            <li><a href="https://github.com/ionitron">github.com/ionitron</a></li>
+          <ul>
+            <li>Nate Brenner</li>
+            <li>Web Developer</li>
+            <li><a href="https://twitter.com/njbrenner">@njbrenner</a></li>
+            <li><a href="https://github.com/nathan-j-brenner">github.com/nathan-j-brenner</a></li>
           </ul>
+          
+          <aside class="notes">
+              <ul>
+                  <li>Portland Code School</li>
+                  <li>JS: last January</li>
+                  <li>Node: last May</li>
+                  <li>Angular: August</li>
+                  <li>John Papa's style guide</li>
+                  <li>Ionic/TypeScript: Ken Howard with CSG Pro, October</li>
+                  <li>Bulk presentation: from Ionic</li>
+              </ul>
+          </aside>
         </section>
 
         <section>
           <h2>Overview</h2>
           <ol>
             <li>Native vs Hybrid Apps</li>
-            <li>Intro Ionic</li>
+            <li>Intro Ionic 1</li>
+            <li>Getting Started and template apps</li>
             <li>UI Components</li>
-            <li>Ionic CLI</li>
-            <li>Demos</li>
+            <li>Ionic 2</li>
           </ol>
         </section>
-
-
-        <section>
-          <blockquote>
-            &ldquo;I want to build an app!&rdquo;
-          </blockquote>
-        </section>
-
 
         <section>
           <h3>More Platforms. More Problems.</h3>
@@ -95,28 +93,39 @@
             <img src="img/windows.png" class="logo" width="200" height="200" style="margin-left: 10px; margin-right: 10px">
             <img src="img/blackberry.png" class="logo" width="200" height="200" style="margin-left: 10px;">
           </p>
+          
+          <aside class="notes">
+              <ul>
+                  <li>native: specific to a platform</li>
+                  <li>It's not enough to create an app for one platform, esp. if it starts as a web app</li>
+                  <li>shopping (home depot, wal-mart, netflix, slack</li>
+                  <li>Android and iOS SDK</li>
+              </ul>
+          </aside>
         </section>
 
 
         <section>
-          <h3 style="font-size: 80px">Hybrid Apps!</h3>
-          <p style="font-size: 32px"><strong>HTML5</strong> that acts like native</p>
-          <p style="font-size: 32px">Web wrapped in <strong>native layer</strong></p>
-          <p style="font-size: 32px">Direct access to <strong>native APIs</strong></p>
-          <p style="font-size: 32px">Familiar <strong>web dev</strong> environment</p>
-          <p style="font-size: 32px">A <strong>single code base</strong> (web platform!)</p>
+          <h3 style="font-size: 60px">Hybrid Apps!</h3>
+          <img src="img/cordova.png" alt="Adobe Cordova">
+          <p style="font-size: 24px"><strong>HTML5</strong> that acts like native</p>
+          <p style="font-size: 24px">Web wrapped in <strong>native layer</strong></p>
+          <p style="font-size: 24px">Direct access to <strong>native APIs</strong></p>
+          <p style="font-size: 24px">Familiar <strong>web dev</strong> environment</p>
+          <p style="font-size: 24px">A <strong>single code base</strong> (web platform!)</p>
+          
+          <aside class="notes">
+              <ul>
+                  <li>2009: PhoneGap by Nitobi</li>
+                  <li>2011: Adobe aquired Nitobi, renamed PhoneGap to Cordova, made Cordova an open source library, and commeralized a new product called PhoneGap</li>
+                  <li>Cordova is simple and powerful API that maps JavaScript to native code or plugins</li>
+                  <li>With Cordova, you can create a single code base, and build it into different platforms</li>
+              </ul>
+          </aside>
         </section>
 
-
-        <section data-background="img/oldphones.jpg">
-          <blockquote style="font-size: 80px; font-family:Georgia; text-shadow: 5px 0 15px rgba(0,0,0,.7)">
-            &ldquo;It's not 2007 anymore&rdquo;
-          </blockquote>
-        </section>
-
-
-        <section data-background="img/dylan.jpg">
-          <img src="img/times-changin.png" style="height: 100px; margin: 0 300px 40px 0;">
+        <section>
+          <h3>Changes in the technology</h3>
           <table>
             <tr>
               <th>Year</th>
@@ -131,8 +140,20 @@
               <td>128 MB</td>
             </tr>
             <tr>
+              <td>2007</td>
+              <td>Nokia N95</td>
+              <td>332 MHz</td>
+              <td>128 MB</td>
+            </tr>
+            <tr>
               <td>2010</td>
               <td>iPhone 4</td>
+              <td>1 GHz</td>
+              <td>512 MB</td>
+            </tr>
+            <tr>
+              <td>2010</td>
+              <td>Samsung Galaxy S</td>
               <td>1 GHz</td>
               <td>512 MB</td>
             </tr>
@@ -142,7 +163,21 @@
               <td>1.4 GHz dual-core</td>
               <td>1 GB</td>
             </tr>
+            <tr>
+              <td>2015</td>
+              <td>Nexus 6</td>
+              <td>2.7 GHz</td>
+              <td>3 GB</td>
+            </tr>
           </table>
+          
+          <aside class="notes">
+              <ul>
+                  <li>intially these cross platform apps were slow and problematic</li>
+                  <li>Device power and memory has steadiy increased and improved</li>
+              </ul>
+          </aside>
+          
         </section>
 
 
@@ -157,18 +192,28 @@
             <img src="img/caniuse-querySelector.png" width=460 class="logo">
             <img src="img/caniuse-flexbox.png" width=460 class="logo">
           </p>
+          <aside class="notes">
+              differences between browers is narrowing
+          </aside>
         </section>
 
 
         <section data-background="white">
-          <img src="img/ios8-adoption.png">
-          <p style="font-size:10px">https://mixpanel.com/trends/#report/ios_8/from_date:-141,report_unit:day,to_date:0</p>
+          <img src="img/iOS_9_adoption.png" alt="Adoption rate of iOS 9">
+          <p style="font-size:10px">https://mixpanel.com/trends/#report/ios_9</p>
         </section>
 
 
         <section data-background="white">
-          <img src="img/android-adoption.png">
+          <img src="img/android_adoption2016.png">
           <p style="font-size:10px">https://mixpanel.com/trends/#report/android_os_adoption</p>
+          
+          <aside class="notes">
+              <ul>
+                  <li>slower than iOS, more complicated ecosystem</li>
+                  <li>most android phones have the most recent android os version (Lollipop)</li>
+              </ul>
+          </aside>
         </section>
 
 
@@ -178,7 +223,14 @@
           <p style="margin:30px auto 20px auto; width: 600px">
             Common UI, APIs, views, navigation, stack history, transitions, interactions, gestures, etc.
           </p>
-            <img src="img/native-sdk.png" style="width:66%">
+          <img src="img/native-sdk.png" style="width:66%">
+            
+          <aside class="notes">
+              <ul>
+                  <li>SDK: Software Development Kit: A set of tools to build an app for a specific platform</li>
+                  <li>User Interactions</li>
+              </ul>
+          </aside>
         </section>
 
 
@@ -186,11 +238,27 @@
 
 
         <section data-background="img/websdk.png" style="width:100%">
+            <aside class="notes">
+                <ul>
+                    <li>Interactions on a phone are different than a computer</li>
+                </ul>
+            </aside>
         </section>
 
 
         <section data-background="white">
           <img src="img/ionic-logo.svg" style="width:750px;">
+          
+          <aside class="notes">
+              <ul>
+                  <li>Built for 2013</li>
+                  <li>Release Candidate: winter 2015</li>
+                  <li>Max Lynch, Ben Sperry, Adam Bradley</li>
+                  <li>Drifty Co: Madison, Wisconsin</li>
+                  <li>SDK for creating hybrid apps</li>
+                  <li>>21k gitHub stars</li>
+              </ul>
+          </aside>
         </section>
 
 
@@ -205,6 +273,12 @@
           <p style="margin-top: 30px; opacity: 0.6">
             (You'll feel right at home)
           </p>
+          
+          <aside class="notes">
+              <ul>
+                  <li>Create hybrid apps (android and iOS) with web languages</li>
+              </ul>
+          </aside>
         </section>
 
 
@@ -215,6 +289,15 @@
           <p>Proven for <strong>large-scale</strong> app development</p>
           <p>UI Components using <strong>Directives &amp; Services</strong></p>
           </ul>
+          
+          <aside class="notes">
+              <ul>
+                  <li>ionic custom directives</li>
+                  <li>If you know Angular, you can now share some of your web app code and build a cooresponding native app</li>
+                  <li>Or you can start building mobile apps without investing in the time to learn a native sdk and language</li>
+                  <li>web vs native: can share services, but views and controllers will needs some revisions</li>
+              </ul>
+          </aside>
         </section>
 
 
@@ -224,6 +307,13 @@
           <p>Quickly give your app its own <strong>look and feel</strong></p>
           <p>CSS designed to be <strong>easily overridden</strong></p>
           <p><strong>Variables based</strong> with default settings</p>
+          
+          <aside class="notes">
+              <ul>
+                  <li>Gulp built in so you can add your own css, or change some of the default values</li>
+                  <li>ion-icon: huge library for common ui elements, open sourced, MIT licensed</li>
+              </ul>
+          </aside>
         </section>
 
 
@@ -236,12 +326,111 @@
             <li style="background: #3b4854">WebView (Cordova)</li>
             <li style="background: #d4deee; color: #3b4854;">Native App</li>
           </ul>
+          
+          <aside class="notes">
+              <ul>
+                  <li>Services, Controllers, Directives, Views</li>
+                  <li>ionic native feeling ui components</li>
+                  <li>ionic boilerplate</li>
+                  <li>Cordova is the glue between your app and native sdks</li>
+                  <li>Cordova builds into platforms: smartphones</li>
+              </ul>
+          </aside>
         </section>
 
 
         <section data-background="img/continuity.png">
+        
+        <aside class="notes">
+            <ul>
+                <li>side by side display of how the code will build into each platform</li>
+                <li>Ionic will create different native code dependant on the platform</li>
+                <li>tabs navigation: flipped, icons, sidebars</li>
+            </ul>
+        </aside>
         </section>
-
+        
+        <section>
+            <h2>Getting Started</h2>
+            <pre><code>
+                npm install ionic cordova -g
+                npm start myApp
+                cd myApp
+                ionic serve
+            </code></pre>
+            
+            <aside class='notes'>
+                <ul>
+                    <li>ionic platform add ios, android</li>
+                    <li>ionic build ios/android</li>
+                    <li>ionic emulate ios</li>
+                    <li>from a mac, you'll need xcode, so running ios emulator is easy, but getting android sdk running is slower.  I2 recommends using Genymotion</li>
+                    <li>Easier just to run ionic serve, open chrome dev tools, and toggle device mode</li>
+                    <li>ionic serve --lab: side by side android and ios</li>
+                </ul>
+            </aside>
+        </section>
+        
+        <section>
+            <h2>Boilerplate</h2>
+            <pre><code>
+                $ tree myApp  
+                |-- bower.json
+                |-- config.xml
+                |-- gulpfile.js
+                |-- hooks
+                |-- ionic.project
+                |-- node_modules
+                |-- package.json
+                |-- platforms
+                |-- plugins
+                |-- resources
+                |-- scss
+                |-- www
+            </code></pre>
+            <aside class="notes">
+                <ul>
+                    <li>bower: script dependencies, load ionic code</li>
+                    <li>config: for cordova</li>
+                    <li>gulpfile: build tool</li>
+                    <li>hooks: ignore, cordova</li>
+                    <li>ionic.project: ignore, settings file</li>
+                    <li>node_modules: local node packages</li>
+                    <li>package.json: node dependencies, comes with starter project</li>
+                    <li>platform: cordova, native app projects for the platforms you've installed</li>
+                    <li>plugins: cordova, cordova stores plugins</li>
+                    <li>scss: customize look </li>
+                    <li>www: root of app, where you'll do most of your work</li>
+                </ul>
+            </aside>
+        </section>
+        
+        <section>
+            <h2>WWW</h2>
+            <pre><code>
+                |-- www
+                    |-- css
+                        |-- style.css
+                    |-- img
+                    |-- js
+                        |-- app.js
+                        |-- controllers.js
+                        |-- services.js
+                    |-- lib
+                    |-- templates
+                    |-- index.html
+            </code></pre>
+            <aside class="notes">
+                <ul>
+                    <li>index.html is the starting point, basically a shell, loads dependencies</li>
+                    <li>want to write in TypeScript or adhire to style guidelines: add a gulp task to export/compile *.ts files from another directory (outside www)</li>
+                </ul>
+            </aside>
+        </section>
+        
+        <section>
+            <h2>Common UI Components</h2>
+        </section>
 
         <section>
           <div class="col preview demo-frame">
@@ -264,6 +453,14 @@
 
 </ion-list></code></pre>
           </div>
+          
+          <aside class="notes">
+              <ul>
+                  <li>ui component overview</li>
+                  <li>swipe item to left, interactions</li>
+                  <li>ul and li replaced with ion-list and list-item</li>
+              </ul>
+          </aside>
         </section>
 
 
@@ -288,6 +485,11 @@
   </div>
 </div></code></pre>
           </div>
+          <aside class="notes">
+              <ul>
+                  <li>Ionic is bridging the ui gap between web and native</li>
+              </ul>
+          </aside>
         </section>
 
 
@@ -321,6 +523,14 @@
 
 </ion-tabs></code></pre>
           </div>
+          <aside class="notes">
+              <ul>
+                  <li>issues with the next few pages</li>
+                  <li>I'll demo later as the navigation has a bigger impact on creating native apps</li>
+                  <li>shows back button when in nested views</li>
+                  <li>each view has it's own navigation history</li>
+              </ul>
+          </aside>
         </section>
 
 
@@ -366,64 +576,93 @@
           </div>
         </section>
 
-
-        <section>
-          <h2><strong>MIT LICENSED</strong></h2>
-          <h6 class="light-text">Free to use (even commercially)</h6>
-        </section>
-
-
-        <section>
-          <h2>Ionicons</h2>
-          <img src="img/ionicons.png" class="logo" width="655" height="436">
-          <p>700+ MIT licensed font-icons included</p>
-          <p><a href="http://ionicons.com/" target="_blank">ionicons.com</a></p>
-        </section>
-
-
-
-        <section data-background="white">
-          <p><code style="font-size: 1.2em;" class="ionic-blue">npm install -g ionic cordova</code></p>
-          <img src="img/cli.png" height="220" style="border: 0">
-          <p class="ionic-blue">Boilerplate <strong>app structure</strong> ready for customization</p>
-          <p class="ionic-blue"><strong>LiveReload</strong> both local and native builds</p>
-          <p class="ionic-blue">Build and run <strong>native apps</strong></p>
-        </section>
-
-        <section data-background="img/chromium.jpg">
-          <h3 style="margin:0; font-size:60px;">Modern</h3>
-          <h2 style=" font-size:80px;">Chromium!</h2>
-          <p>Chromium for Android <strong>WebViews</strong></p>
-          <p><strong>Upgrade Android</strong> 4.1+ and above</p>
-          <p>Same hardware, <strong>modern software</strong></p>
-          <p><strong>Amazing performance</strong> improvements</p>
-        </section>
-
         <section data-background="img/ng-cordova.png">
+            <aside class="notes">
+                <ul>
+                    <li>camera</li>
+                    <li>geolocation</li>
+                    <li>date picker</li>
+                    <li>keyboard</li>
+                    <li>push notification</li>
+                </ul>
+            </aside>
         </section>
 
 
         <section data-background="img/ionicio.png">
+            <aside class="notes">
+                <ul>
+                    <li>larger ecosystem, full stack</li>
+                </ul>
+            </aside>
         </section>
 
 
         <section data-background="img/ionic-view.png">
+            <aside class="notes">
+                <ul>
+                    <li>an app that can view your app in it's working state from your device</li>
+                    <li>apha testing</li>
+                    <li>no need for ios or android sdk to be installed</li>
+                </ul>
+            </aside>
         </section>
 
 
         <section data-background="img/ionic-creator.png">
+            <aside class="notes">
+                <ul>
+                    <li>for designers or people that don't want to dig into the codebase</li>
+                    <li>drag and drop interface</li>
+                    <li>able to download the code once you've got it working</li>
+                </ul>
+            </aside>
         </section>
 
 
         <section data-background="img/market.png">
+            <aside class="notes">
+                <ul>
+                    <li>ionic market: create app themes/designs/plugins</li>
+                    <li>looks like wordpress</li>
+                </ul>
+            </aside>
+            
         </section>
 
-
-        <section data-background="img/community.jpg">
-        </section>
-
-
-        <section data-background="img/ionic-angular-v2.jpg">
+        <section>
+            <h2>Ionic 2</h2>
+            <ul>
+                <li>Goals:</li>
+                    <ul>
+                        <li>Performance</li>
+                        <li>Simplicity</li>
+                        <li>Near Native UX</li>
+                        <li>Creative Freedom</li>
+                        <li>Future Proof</li>
+                    </ul>
+                <li>$ npm install -g ionic@beta</li>
+                <li>$ ionic start myApp --v2</li>
+                <li>Webpack</li>
+                <li>Want to write in TypeScript? $ionic start myApp --v2 --ts</li>
+            </ul>
+            
+            <aside class='notes'>
+                <ul>
+                    <li>in Alpha since last July</li>
+                    <li>performance: NG2 and TS</li>
+                    <li>simplicity: element properties over classes</li>
+                    <li>native ux: platform continuity, navigation overhaul</li>
+                    <li>sass by default, web animations ui</li>
+                    <li>future: ES6: ng1 features now a part of es6: modular, block scoping, promises, classes</li>
+                    <li>ngCordova plugins built in</li>
+                    <li>ionic@beta: still works with I1 apps (webpack installed locally)</li>
+                    <li>i1-i2: following best practices?</li>
+                    <li>navigation: nav.push/pop instead of tied to url</li>
+                    
+                </ul>
+            </aside>
+            
         </section>
 
 
@@ -432,51 +671,37 @@
           <br />
           <p>
             <strong>Getting started guide</strong>
-            <br />
             <a href="hhttp://ionicframework.com/getting-started/" target="_blank">
-              <span class="light-text">ionicframework.com/getting-started</span>
+              <span class="light-text">Getting started guide</span>
             </a>
-          </p>
           <br />
-          <p>
             <strong>Documentation</strong>
-            <br />
             <a href="http://ionicframework.com/docs/" target="_blank">
               <span class="light-text">ionicframework.com/docs</span>
             </a>
-          </p>
           <br />
-          <p>
             <strong>Visit the Community Forum</strong>
-            <br />
             <a href="http://forum.ionicframework.com/" target="_blank">
               <span class="light-text">forum.ionicframework.com</span>
             </a>
-          </p>
           <br />
-          <p>
             <strong>Contribute on GitHub</strong>
-            <br />
             <a href="https://github.com/driftyco/ionic" target="_blank">
               <span class="light-text">github.com/driftyco/ionic</span>
             </a>
+          <br />
+              <strong>Ionic 2 Documentation</strong>
+              <a href="http://ionicframework.com/docs/v2/">http://ionicframework.com/docs/v2/</a>
+          <br />
+              <strong>Slack</strong>
+              <a href="http://ionicworldwide.herokuapp.com/">Ionic-worldwide</a>
           </p>
         </section>
-
-
-        <section data-background="#232323">
-          <h2 style="color:#32b83b;font-family:Monaco;"><strong>Demo Time!</strong></h2>
-          <h6 style="color:#32b83b;font-family:Monaco;">May the demo gods be with us</h6>
-        </section>
-
-
+        
         <section>
           <h2><code style="font-size:60px">&lt;/html&gt;</code></h2>
-          <h3>
-            <a href="https://twitter.com/ionicframework" target="_blank">
-              @ionicframework
-            </a>
-          </h3>
+          <h3>Nathan Brenner</h3>
+          <h3>Questions?</h3>
           <h4>
             <a href="http://ionicframework.github.io/ionic-present/#/">
               http://ionicframework.github.io/ionic-present
