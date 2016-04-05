@@ -32,7 +32,7 @@ module.exports = function(grunt) {
 		sass: {
 			core: {
 				files: {
-					'css/reveal.css': 'css/reveal.scss',
+					'css/presentation.css': 'scss/main.scss',
 				}
 			},
 			themes: {
@@ -42,15 +42,7 @@ module.exports = function(grunt) {
 
 		autoprefixer: {
 			dist: {
-				src: 'css/reveal.css'
-			}
-		},
-
-		cssmin: {
-			compress: {
-				files: {
-					'css/reveal.min.css': [ 'css/reveal.css' ]
-				}
+				src: 'css/presentation.css'
 			}
 		},
 
@@ -110,11 +102,11 @@ module.exports = function(grunt) {
 				tasks: 'js'
 			},
 			theme: {
-				files: [ 'css/theme/source/*.scss', 'css/theme/template/*.scss' ],
+				files: [ 'scss/theme/source/*.scss', 'scss/theme/template/*.scss' ],
 				tasks: 'css-themes'
 			},
 			css: {
-				files: [ 'css/*.scss' ],
+				files: [ 'scss/*.scss' ],
 				tasks: 'css-core'
 			},
             html: {
@@ -127,7 +119,6 @@ module.exports = function(grunt) {
 	// Dependencies
 	grunt.loadNpmTasks( 'grunt-contrib-qunit' );
 	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
-	grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
 	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-sass' );
@@ -145,10 +136,10 @@ module.exports = function(grunt) {
 	grunt.registerTask( 'css-themes', [ 'sass:themes' ] );
 
 	// Core framework CSS
-	grunt.registerTask( 'css-core', [ 'sass:core', 'autoprefixer', 'cssmin' ] );
+	grunt.registerTask( 'css-core', [ 'sass:core', 'autoprefixer'] );
 
 	// All CSS
-	grunt.registerTask( 'css', [ 'sass', 'autoprefixer', 'cssmin' ] );
+	grunt.registerTask( 'css', [ 'sass', 'autoprefixer' ] );
 
 	// Package presentation to archive
 	grunt.registerTask( 'package', [ 'default', 'zip' ] );

@@ -10,7 +10,11 @@
 
 
 // Override theme settings
-$backgroundColor: #3374de;
+
+// Classic Ionic Blue
+//$backgroundColor: #3374de;
+// Modern Ionic Dark Blue
+$backgroundColor: #2D303E;
 
 $mainColor: #fff;
 $headingColor: #fff;
@@ -102,7 +106,6 @@ section.has-light-background {
 
     li {
       padding: 0 0 0 70px;
-      background-size:
     }
   }
 
