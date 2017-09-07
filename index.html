@@ -4,13 +4,10 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Ionic + Angular: Superpowers for Mobile App Development</title>
+    <title>Ionic: The UI Framework for the Web</title>
 
-    <meta name="description" content="Ionic Framework Presentation: The beautiful, open source framework for developing hybrid mobile apps with HTML5.">
-    <meta name="author" content="https://twitter.com/adamdbradley">
-    <meta name="author" content="https://twitter.com/benjsperry">
-    <meta name="author" content="https://twitter.com/perrygovier">
-    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="description" content="Ionic Framework Presentation: The beautiful, open source framework for developing native and mobile web apps with web technologies.">
+    <link rel="shortcut icon" href="img/favicon-96x96.png">
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -21,7 +18,7 @@
     <link rel="stylesheet" href="css/presentation.css">
 
     <!-- Code syntax highlighting -->
-    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="lib/css/atom-one-dark.css">
 
     <!-- Printing and PDF exports -->
     <script>
@@ -205,7 +202,6 @@
 
 
 
-
         <section>
           <h2>So, what's missing?</h2>
         </section>
@@ -221,7 +217,7 @@
         </section>
 
         <section data-background="white">
-          <img src="img/ionic-logo.svg" style="width:750px;">
+          <img src="img/ionic-logo-portrait.png" style="max-width:300px;">
         </section>
 
 
@@ -289,25 +285,6 @@
             <iframe isrc="demos/list/index.html"></iframe>
           </div>
           <div class="col code">
-            <h2>Core Components</h2>
-            <ul style="margin-left: 70px">
-            </ul>
-            <pre><code data-trim contenteditable class="xml">
-<ion-list>
-
-  <ion-item ng-repeat="item in items" item="item">
-    List Item {{ item.id }}
-  </ion-item>
-
-</ion-list></code></pre>
-          </div>
-        </section>
-
-        <section>
-          <div class="col preview demo-frame">
-            <iframe isrc="demos/list/index.html"></iframe>
-          </div>
-          <div class="col code">
             <h2>Complex Lists</h2>
             <ul style="margin-left: 70px">
               <li>AngularJS Directive</li>
@@ -316,11 +293,12 @@
               <li>Delete</li>
             </ul>
             <pre><code data-trim contenteditable class="xml">
-<ion-list>
-  <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
-    {{ item }}
-  </button>
-</ion-list></code></pre>
+&lt;ion-list&gt;
+  &lt;button ion-item *ngFor=&quot;let item of items&quot;&gt;
+    {{ item.title }}
+  &lt;/button&gt;
+&lt;/ion-list&gt;
+</code></pre>
           </div>
         </section>
 
@@ -338,14 +316,16 @@
               <li>Only renders the viewable items</li>
               <li>Smooth scrolling!</li>
             </ul>
-            <pre><code data-trim contenteditable class="xml">
-<ion-list [virtualScroll]="items">
-
-  <ion-item *virtualItem="let item">
-    {{ item }}
-  </ion-item>
-
-</ion-list></code></pre>
+            <pre><code data-trim data-noescape contenteditable class="xml">
+              &lt;ion-list [virtualScroll]=&quot;items&quot;&gt;
+                &lt;ion-item *virtualItem=&quot;let item&quot;&gt;
+                  &lt;ion-avatar item-start&gt;
+                    &lt;ion-img [src]=&quot;item.avatarUrl&quot;&gt;&lt;/ion-img&gt;
+                  &lt;/ion-avatar&gt;
+                  {{ item.firstName }} {{ item.lastName }}
+                &lt;/ion-item&gt;
+              &lt;/ion-list&gt;
+</code></pre>
           </div>
         </section>
 
@@ -436,10 +416,7 @@
         <section data-background="white">
           <p><code style="font-size: 1.2em;" class="ionic-blue">npm install -g ionic cordova</code></p>
           <!--<img src="img/cli.png" height="220" style="border: 0">-->
-          <p><code style="font-size: 1.2em" class="ionic-blue">ionic start myApp --v2</code></p>
-          <p class="ionic-blue">Boilerplate <strong>app structure</strong> ready for customization</p>
-          <p class="ionic-blue"><strong>LiveReload</strong> both local and native builds</p>
-          <p class="ionic-blue">Build and run <strong>native apps</strong></p>
+          <p><code style="font-size: 1.2em" class="ionic-blue">ionic start myApp</code></p>
         </section>
 
         <!-- Modern Chromium Slide
@@ -453,22 +430,18 @@
         </section>
         -->
 
+        <!--
         <section data-background="img/market.png">
         </section>
+      -->
 
-        <section data-background="img/community.jpg">
-        </section>
         <!--
         <section data-background="img/ng-cordova.png">
         </section>
 
-
-
-
         <section data-background="img/ionic-angular-v2.jpg">
         </section>
         -->
-
 
         <section>
           <h2>Get Started with Ionic!</h2>
