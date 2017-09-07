@@ -48,7 +48,10 @@
 
         <section>
           <img src="img/ionic-logo-landscape.png" class="logo" style="max-width: 300px">
-          <h4 style="line-height: 40px; margin-top: 30px;">Building Amazing Apps<br>with Open Web Technologies</h4>
+          <h4 style="line-height: 40px; margin-top: 30px;">Build Amazing Apps with<br>The Web Platform</h4>
+          <p>
+            <a target="_blank" href="http://ionicframework.com/">ionicframework.com</a>
+          </p>
         </section>
 
 
@@ -314,11 +317,9 @@
             </ul>
             <pre><code data-trim contenteditable class="xml">
 <ion-list>
-
-  <ion-item ng-repeat="item in items" item="item">
-    List Item {{ item.id }}
-  </ion-item>
-
+  <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+    {{ item }}
+  </button>
 </ion-list></code></pre>
           </div>
         </section>
@@ -338,12 +339,13 @@
               <li>Smooth scrolling!</li>
             </ul>
             <pre><code data-trim contenteditable class="xml">
-<div class="list">
-  <div collection-repeat="c in contacts">
-    <h2>{{ c.name }}</h2>
-    <p>{{ c.email }}</p>
-  </div>
-</div></code></pre>
+<ion-list [virtualScroll]="items">
+
+  <ion-item *virtualItem="let item">
+    {{ item }}
+  </ion-item>
+
+</ion-list></code></pre>
           </div>
         </section>
 
@@ -355,28 +357,17 @@
           <div class="col code">
             <h3>Navigation</h3>
             <ul style="margin-left: 70px">
-              <li>Uses AngularUI Router</li>
-              <li>Shows back button when possible</li>
+              <li>Native-app style navigation</li>
               <li>Transitions follow direction of nav</li>
               <li>Updates the app's URL</li>
-              <li>Multi-history stack</li>
+              <li>Supports parallel histories</li>
               <li>Swipe to go back</li>
             </ul>
             <pre><code data-trim contenteditable class="xml">
-<ion-tabs>
-
-  <ion-tab title="Home" icon="ion-ios-home">
-    <ion-nav-view name="home"></ion-nav-view>
-  </ion-tab>
-
-  <ion-tab title="About" icon="ion-ios-information">
-    <ion-nav-view name="about"></ion-nav-view>
-  </ion-tab>
-
-  <ion-tab title="Contact" icon="ion-ios-world">
-    <ion-nav-view name="contact"></ion-nav-view>
-  </ion-tab>
-
+<ion-tabs selectedIndex="2">
+  <ion-tab [root]="tab1Root"></ion-tab>
+  <ion-tab [root]="tab2Root"></ion-tab>
+  <ion-tab [root]="tab3Root"></ion-tab>
 </ion-tabs></code></pre>
           </div>
         </section>

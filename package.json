@@ -6,7 +6,7 @@
   "subdomain": "revealjs",
   "scripts": {
     "test": "grunt test",
-    "start": ""
+    "start": "grunt serve"
   },
   "author": {
     "name": "Hakim El Hattab",
