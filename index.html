@@ -4,23 +4,21 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Ionic + Angular: Superpowers for Mobile App Development</title>
+    <title>Ionic: The UI Framework for the Web</title>
 
-    <meta name="description" content="Ionic Framework Presentation: The beautiful, open source framework for developing hybrid mobile apps with HTML5.">
-    <meta name="author" content="https://twitter.com/adamdbradley">
-    <meta name="author" content="https://twitter.com/benjsperry">
-    <meta name="author" content="https://twitter.com/perrygovier">
-    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="description" content="Ionic Framework Presentation: The beautiful, open source framework for developing native and mobile web apps with web technologies.">
+    <link rel="shortcut icon" href="img/favicon-96x96.png">
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-    <link rel="stylesheet" href="css/reveal.css">
+    <!-- Our compiled CSS -->
+    <link rel="stylesheet" href="css/presentation.css">
 
     <!-- Code syntax highlighting -->
-    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="lib/css/atom-one-dark.css">
 
     <!-- Printing and PDF exports -->
     <script>
@@ -46,13 +44,19 @@
 
 
         <section>
-          <img src="img/ionic-logo.png" class="logo" width="296" height="331">
-          <h4>Building Hybrid Apps with AngularJS and Ionic</h4>
+          <img src="img/ionic-logo-landscape.png" class="logo" style="max-width: 300px">
+          <h4 style="line-height: 40px; margin-top: 30px;">Build Amazing Apps with<br>The Web Platform</h4>
+          <p>
+            <a target="_blank" href="http://ionicframework.com/">ionicframework.com</a>
+          </p>
         </section>
 
 
         <section>
-          <img src="img/me.png" style="position: absolute; top:0; left:0; max-width: 260px; max-height: 260px; border-radius: 30px">
+          <img src="img/ionitron-twitter.png" style="position: absolute; top:0; left:0; max-width: 260px; max-height: 260px; border-radius: 30px">
+          <div style="position: absolute; top: -100px; left: 300px;">
+            <h2>About Me</h2>
+          </div>
           <ul style="position: absolute; top:0; left:300px;">
             <li>Ionitron</li>
             <li>Ionic Framework Developer</li>
@@ -66,7 +70,7 @@
           <h2>Overview</h2>
           <ol>
             <li>Native vs Hybrid Apps</li>
-            <li>Intro Ionic</li>
+            <li>Intro to Ionic</li>
             <li>UI Components</li>
             <li>Ionic CLI</li>
             <li>Demos</li>
@@ -77,36 +81,38 @@
         <section>
           <blockquote>
             &ldquo;I want to build an app!&rdquo;
+            <div style="margin-top: 30px; margin-left: 200px;">
+              - Literally everyone
+            </div>
           </blockquote>
         </section>
 
 
         <section>
-          <h3>More Platforms. More Problems.</h3>
+          <h3>Building apps is <i>Hard</i></h3>
           <ul>
-            <li>Proficiency in each platform required</li>
+            <li>Proficiency in each targeted platform</li>
+            <li>Domain-specific language to learn</li>
             <li>Entirely separate code bases</li>
-            <li>Timely &amp; expensive development</li>
-            <li>Diminishing returns</li>
+            <li>Expensive development (time and cost)</li>
+            <li>Lack of portability with native approaches</li>
           </ul>
           <p style="margin-top: 60px">
             <img src="img/apple.png" class="logo" width="200" height="200" style="margin-right: 10px">
             <img src="img/android.png" class="logo" width="200" height="200" style="margin-left: 10px; margin-right: 10px">
             <img src="img/windows.png" class="logo" width="200" height="200" style="margin-left: 10px; margin-right: 10px">
-            <img src="img/blackberry.png" class="logo" width="200" height="200" style="margin-left: 10px;">
+            <img src="img/safari.png" class="logo" width="200" height="200" style="margin-left: 10px; margin-right: 10px">
+            <!--<img src="img/blackberry.png" class="logo" width="200" height="200" style="margin-left: 10px;">-->
           </p>
         </section>
 
-
         <section>
-          <h3 style="font-size: 80px">Hybrid Apps!</h3>
-          <p style="font-size: 32px"><strong>HTML5</strong> that acts like native</p>
-          <p style="font-size: 32px">Web wrapped in <strong>native layer</strong></p>
-          <p style="font-size: 32px">Direct access to <strong>native APIs</strong></p>
-          <p style="font-size: 32px">Familiar <strong>web dev</strong> environment</p>
-          <p style="font-size: 32px">A <strong>single code base</strong> (web platform!)</p>
+          <h3 style="font-size: 60px">Enter Hybrid Apps!</h3>
+          <p style="font-size: 32px"><strong>HTML5</strong> with platform-specific UI</p>
+          <p style="font-size: 32px">Full access to <strong>native APIs and SDKs</strong></p>
+          <p style="font-size: 32px">Familiar <strong>web development</strong> environment</p>
+          <p style="font-size: 32px"><strong>Single code base</strong> across native and the web</p>
         </section>
-
 
         <section data-background="img/oldphones.jpg">
           <blockquote style="font-size: 80px; font-family:Georgia; text-shadow: 5px 0 15px rgba(0,0,0,.7)">
@@ -116,7 +122,8 @@
 
 
         <section data-background="img/dylan.jpg">
-          <img src="img/times-changin.png" style="height: 100px; margin: 0 300px 40px 0;">
+          <!--<img src="img/times-changin.png" style="height: 100px; margin: 0 300px 40px 0;">-->
+          <h2>Devices have evolved considerably!</h2>
           <table>
             <tr>
               <th>Year</th>
@@ -142,55 +149,75 @@
               <td>1.4 GHz dual-core</td>
               <td>1 GB</td>
             </tr>
+            <tr>
+              <td>2016</td>
+              <td>iPhone 6s</td>
+              <td>1.84 GHz dual-core</td>
+              <td>2 GB</td>
+            </tr>
           </table>
         </section>
 
 
         <section>
-          <h4 style="font-size:50px; margin:0;">Web-standards</h4>
-          <h4 style="font-size:80px;">Have improved!</h4>
-          <p style="font"><a href="http://caniuse.com/">caniuse.com</a> is lookin' pretty good nowadays</p>
-          <p>Android is now <strong>Chromium-based</strong></p>
-          <p>iOS users keep their devices <strong>up-to-date</strong></p>
-
+          <h4 style="font-size:50px; margin:0;">Much better</h4>
+          <h4 style="font-size:80px;">WEB APIs!</h4>
+          <p>Performant animation with GPU compositing</p>
+          <p>Advanced mobile device features and APIs</p>
+          <p>Web-workers to offload tasks from UI</p>
+          <p>Modern <strong>Chromium</strong> for Android</p>
           <p style="text-align:center;">
             <img src="img/caniuse-querySelector.png" width=460 class="logo">
             <img src="img/caniuse-flexbox.png" width=460 class="logo">
           </p>
+          <p>Source: <a href="http://caniuse.com">caniuse.com</a></p>
+        </section>
+
+        <section>
+          <h2>Users keeping devices updated</h2>
+          <h4>Example: Rapid iOS Upgrades</h4>
+          <img src="img/ios9adoption2.png">
+          <p style="font-size:10px">https://mixpanel.com/trends/#report/ios_9</p>
         </section>
 
 
-        <section data-background="white">
-          <img src="img/ios8-adoption.png">
-          <p style="font-size:10px">https://mixpanel.com/trends/#report/ios_8/from_date:-141,report_unit:day,to_date:0</p>
-        </section>
-
-
+        <!--
         <section data-background="white">
           <img src="img/android-adoption.png">
           <p style="font-size:10px">https://mixpanel.com/trends/#report/android_os_adoption</p>
         </section>
+      -->
 
 
+        <!--
         <section>
           <h3 style="margin:0">Native SDKs...</h3>
           <h2 style="font-size:2.2em;">Are Great!</h2>
           <p style="margin:30px auto 20px auto; width: 600px">
-            Common UI, APIs, views, navigation, stack history, transitions, interactions, gestures, etc.
+            Revolutionary UI, integrated sensors APIs, views, navigation, stack history, transitions, interactions, gestures, etc.
           </p>
             <img src="img/native-sdk.png" style="width:66%">
         </section>
+      -->
 
 
 
-
-
-        <section data-background="img/websdk.png" style="width:100%">
+        <section>
+          <h2>So, what's missing?</h2>
         </section>
 
+        <section>
+          <h2>There's no Web SDK!</h2>
+          <img src="img/websdk.png">
+        </section>
+
+        <section>
+          <h2>Ionic to the rescue!</h2>
+          <img src="img/websdk-ionic.png">
+        </section>
 
         <section data-background="white">
-          <img src="img/ionic-logo.svg" style="width:750px;">
+          <img src="img/ionic-logo-portrait.png" style="max-width:300px;">
         </section>
 
 
@@ -203,7 +230,7 @@
             <img src="img/js.png" class="logo" width="185" height="260">
           </div>
           <p style="margin-top: 30px; opacity: 0.6">
-            (You'll feel right at home)
+            (Build websites? You'll feel right at home)
           </p>
         </section>
 
@@ -211,12 +238,18 @@
         <section data-background="img/angular-bg.png">
           <h3 style="font-size:42px; margin:0">Superpowered by</h3>
           <h2 style="font-size:90px;">Angular</h2>
-          <p style="margin-top:60px;"><strong>Extends the HTML</strong> vocabulary</p>
-          <p>Proven for <strong>large-scale</strong> app development</p>
-          <p>UI Components using <strong>Directives &amp; Services</strong></p>
-          </ul>
+          <p style="margin-top:60px;"><strong>Extends HTML</strong> with new tags</p>
+          <p>Built on the <strong>future of JavaScript</strong></p>
+          <p>Optimized for <strong>large-scale</strong> app development</p>
+          <p>High performance for <strong>fast and fluid mobile apps</strong></p>
         </section>
 
+        <section data-background="img/typescript-bg.png">
+          <h2 style="font-size:90px;">TypeScript!</h2>
+          <p style="margin-top:60px;"><strong>Modern JavaScript</strong>, today</p>
+          <p>Perfect for <strong>large</strong> teams and app development</p>
+          <p><strong>Powerful IDE support</strong>: autocompletion, intellisense, refactoring</p>
+        </section>
 
         <section data-background="img/sass.png">
           <h2 style="font-size:3em; text-transform: none;">Sass!</h2>
@@ -233,15 +266,19 @@
             <li style="background: #20ab93">Your App</li>
             <li style="background: #4c8df5">Ionic</li>
             <li style="background: #d94442">Angular</li>
-            <li style="background: #3b4854">WebView (Cordova)</li>
-            <li style="background: #d4deee; color: #3b4854;">Native App</li>
+            <li style="background: #3b4854">Cordova</li>
+            <li style="background: #d4deee; color: #3b4854;">Native SDKs</li>
           </ul>
         </section>
 
 
-        <section data-background="img/continuity.png">
+        <section data-background="#EFF1F5">
+          <img src="img/continuity.png" style="width: 100%">
         </section>
 
+        <section>
+          <h2>Ionic UI Components</h2>
+        </section>
 
         <section>
           <div class="col preview demo-frame">
@@ -256,13 +293,12 @@
               <li>Delete</li>
             </ul>
             <pre><code data-trim contenteditable class="xml">
-<ion-list>
-
-  <ion-item ng-repeat="item in items" item="item">
-    List Item {{ item.id }}
-  </ion-item>
-
-</ion-list></code></pre>
+&lt;ion-list&gt;
+  &lt;button ion-item *ngFor=&quot;let item of items&quot;&gt;
+    {{ item.title }}
+  &lt;/button&gt;
+&lt;/ion-list&gt;
+</code></pre>
           </div>
         </section>
 
@@ -272,21 +308,24 @@
             <iframe isrc="demos/collection-repeat/index.html"></iframe>
           </div>
           <div class="col code">
-            <h3>Collection Repeat</h3>
+            <h3>Virtual Scrolling</h3>
             <ul style="margin-left: 70px">
-              <li>Replacement for Angular's ng-repeat</li>
+              <li>Replacement for Angular's ng-for</li>
               <li>Inspired by iOS’s UICollectionView</li>
               <li>Scroll through thousands of items</li>
               <li>Only renders the viewable items</li>
               <li>Smooth scrolling!</li>
             </ul>
-            <pre><code data-trim contenteditable class="xml">
-<div class="list">
-  <div collection-repeat="c in contacts">
-    <h2>{{ c.name }}</h2>
-    <p>{{ c.email }}</p>
-  </div>
-</div></code></pre>
+            <pre><code data-trim data-noescape contenteditable class="xml">
+              &lt;ion-list [virtualScroll]=&quot;items&quot;&gt;
+                &lt;ion-item *virtualItem=&quot;let item&quot;&gt;
+                  &lt;ion-avatar item-start&gt;
+                    &lt;ion-img [src]=&quot;item.avatarUrl&quot;&gt;&lt;/ion-img&gt;
+                  &lt;/ion-avatar&gt;
+                  {{ item.firstName }} {{ item.lastName }}
+                &lt;/ion-item&gt;
+              &lt;/ion-list&gt;
+</code></pre>
           </div>
         </section>
 
@@ -298,32 +337,23 @@
           <div class="col code">
             <h3>Navigation</h3>
             <ul style="margin-left: 70px">
-              <li>Uses AngularUI Router</li>
-              <li>Shows back button when possible</li>
+              <li>Native-app style navigation</li>
               <li>Transitions follow direction of nav</li>
               <li>Updates the app's URL</li>
-              <li>Multi-history stack</li>
+              <li>Supports parallel histories</li>
+              <li>Swipe to go back</li>
             </ul>
             <pre><code data-trim contenteditable class="xml">
-<ion-tabs>
-
-  <ion-tab title="Home" icon="ion-ios-home">
-    <ion-nav-view name="home"></ion-nav-view>
-  </ion-tab>
-
-  <ion-tab title="About" icon="ion-ios-information">
-    <ion-nav-view name="about"></ion-nav-view>
-  </ion-tab>
-
-  <ion-tab title="Contact" icon="ion-ios-world">
-    <ion-nav-view name="contact"></ion-nav-view>
-  </ion-tab>
-
+<ion-tabs selectedIndex="2">
+  <ion-tab [root]="tab1Root"></ion-tab>
+  <ion-tab [root]="tab2Root"></ion-tab>
+  <ion-tab [root]="tab3Root"></ion-tab>
 </ion-tabs></code></pre>
           </div>
         </section>
 
 
+        <!--
         <section>
           <div class="col preview demo-frame">
             <iframe isrc="demos/swipe-back/index.html"></iframe>
@@ -339,6 +369,7 @@
             </ul>
           </div>
         </section>
+      -->
 
 
         <section>
@@ -384,12 +415,11 @@
 
         <section data-background="white">
           <p><code style="font-size: 1.2em;" class="ionic-blue">npm install -g ionic cordova</code></p>
-          <img src="img/cli.png" height="220" style="border: 0">
-          <p class="ionic-blue">Boilerplate <strong>app structure</strong> ready for customization</p>
-          <p class="ionic-blue"><strong>LiveReload</strong> both local and native builds</p>
-          <p class="ionic-blue">Build and run <strong>native apps</strong></p>
+          <!--<img src="img/cli.png" height="220" style="border: 0">-->
+          <p><code style="font-size: 1.2em" class="ionic-blue">ionic start myApp</code></p>
         </section>
 
+        <!-- Modern Chromium Slide
         <section data-background="img/chromium.jpg">
           <h3 style="margin:0; font-size:60px;">Modern</h3>
           <h2 style=" font-size:80px;">Chromium!</h2>
@@ -398,34 +428,20 @@
           <p>Same hardware, <strong>modern software</strong></p>
           <p><strong>Amazing performance</strong> improvements</p>
         </section>
+        -->
 
+        <!--
+        <section data-background="img/market.png">
+        </section>
+      -->
+
+        <!--
         <section data-background="img/ng-cordova.png">
         </section>
 
-
-        <section data-background="img/ionicio.png">
-        </section>
-
-
-        <section data-background="img/ionic-view.png">
-        </section>
-
-
-        <section data-background="img/ionic-creator.png">
-        </section>
-
-
-        <section data-background="img/market.png">
-        </section>
-
-
-        <section data-background="img/community.jpg">
-        </section>
-
-
         <section data-background="img/ionic-angular-v2.jpg">
         </section>
-
+        -->
 
         <section>
           <h2>Get Started with Ionic!</h2>
@@ -433,7 +449,7 @@
           <p>
             <strong>Getting started guide</strong>
             <br />
-            <a href="hhttp://ionicframework.com/getting-started/" target="_blank">
+            <a href="http://ionicframework.com/getting-started/" target="_blank">
               <span class="light-text">ionicframework.com/getting-started</span>
             </a>
           </p>
